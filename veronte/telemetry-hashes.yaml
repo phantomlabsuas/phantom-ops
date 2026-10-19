@@ -1,0 +1,15 @@
+# Telemetry vector hashes (50020 payload bytes 4-7) for the Phantom Hawk FLIGHT PDI
+# (C:\Projects\Operational\phantomhawk-pdi\UAV-1xVeronte\setup\ver_spdif_tm.xml, last changed 2026-09-29).
+# The hash algorithm is not documented, so hashes cannot be computed from the PDI; they are recorded from a running AP.
+# Decode a 50020 packet only when its hash is listed here; any other hash means the AP runs another configuration.
+#
+# Source: phantomhawk-maint/procedure/telemetry_hashes.yaml (observed on SIL 6041 and hardware AP 6248, fw 7.8.80).
+# V1-V7 of the flight PDI are field-for-field identical to the Maintenance PDI. V0 differs: the flight PDI still has the
+# 19-field V0 (no GPIO read-backs), whose hash was observed before the 2026-10-05 Maintenance PDI change.
+# Re-record after any PDI change (phantomhawk-maint: python tools/record_hashes.py).
+0x930456CA: V0  # 19 fields, 122 bytes - flight PDI. (Maintenance PDI V0 = 0x347392F9, 28 fields, 124 bytes)
+0xD7463605: V1
+0x1E9BC63C: V2
+# Observed 2026-10-16 on the SIL (6041): V0 0x347392F9 = Maintenance PDI. The SIL does NOT run the flight PDI.
+# app/config/bridge.config.json therefore carries both profiles and picks the PDI by hash.
+# V3-V7 are conditional (enable bits B1249, B1248, B1254, B1265); hashes not recorded yet.

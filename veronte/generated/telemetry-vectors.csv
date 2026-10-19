@@ -1,0 +1,927 @@
+vector,enable_bit,period_s,dst,index,var,field,bit_offset,bits,pdi_name,ops_description,used_in_ops_layout
+V0,1,0.1,2,0,R3,real-float32,0,32,,Heading,yes
+V0,1,0.1,2,1,R6,real-float32,32,32,,Yaw,yes
+V0,1,0.1,2,2,R500,real-float32,64,32,,Longitude,yes
+V0,1,0.1,2,3,R501,real-float32,96,32,,Latitude,yes
+V0,1,0.1,2,4,R502,real-float32,128,32,,,
+V0,1,0.1,2,5,R7,real-float32,160,32,,Pitch,yes
+V0,1,0.1,2,6,R8,real-float32,192,32,,Roll,yes
+V0,1,0.1,2,7,R1100,real-float32,224,32,,Lidar 0 Distance,yes
+V0,1,0.1,2,8,R103,real-float32,256,32,,,
+V0,1,0.1,2,9,R2,real-float32,288,32,,GS (Ground Speed),yes
+V0,1,0.1,2,10,R107,real-float32,320,32,,Desired Pitch,yes
+V0,1,0.1,2,11,R108,real-float32,352,32,,Desired Roll,yes
+V0,1,0.1,2,12,U80,uinteger16,384,16,,,
+V0,1,0.1,2,13,P28674,pos_abs,400,96,,,
+V0,1,0.1,2,14,P28675,pos_abs,496,96,,,
+V0,1,0.1,2,15,P28676,pos_abs,592,96,,,
+V0,1,0.1,2,16,P28677,pos_abs,688,96,,,
+V0,1,0.1,2,17,P28678,pos_abs,784,96,,,
+V0,1,0.1,2,18,P28679,pos_abs,880,96,,,
+V1,1,0.16666667,2,0,U0,uinteger16,0,16,,,
+V1,1,0.16666667,2,1,U1,uinteger16,16,16,,,yes
+V1,1,0.16666667,2,2,U201,uinteger16,32,16,,,
+V1,1,0.16666667,2,3,U203,uinteger16,48,16,,,
+V1,1,0.16666667,2,4,B110,bit,64,1,,Stick Not Detected ,yes
+V1,1,0.16666667,2,5,B50,bit,65,1,,Sensors Error,yes
+V1,1,0.16666667,2,6,R3104,real-float32,66,32,Stick - Mode,Stick - Mode,yes
+V1,1,0.16666667,2,7,R3105,real-float32,98,32,Stick - Transition,Stick - Transition,yes
+V1,1,0.16666667,2,8,R3106,real-float32,130,32,Stick - Manual,Stick - Manual,yes
+V1,1,0.16666667,2,9,R100,real-float32,162,32,,Desired IAS (Indicated Airspeed),yes
+V1,1,0.16666667,2,10,B90,bit,194,1,,IMU 3 Error,yes
+V1,1,0.16666667,2,11,B83,bit,195,1,,IMU 2 Error,yes
+V1,1,0.16666667,2,12,B60,bit,196,1,,,
+V1,1,0.16666667,2,13,B1188,bit,197,1,,External magnetometer 0 Error,yes
+V1,1,0.16666667,2,14,B104,bit,198,1,,,
+V1,1,0.16666667,2,15,B105,bit,199,1,,,
+V1,1,0.16666667,2,16,B1311,bit,200,1,Secondary Link Status,Secondary Link Status,yes
+V1,1,0.16666667,2,17,B1313,bit,201,1,Secondary Link ON,Secondary Link ON,yes
+V1,1,0.16666667,2,18,B1301,bit,202,1,FBX Secondary Enabled,FBX Secondary Enabled,yes
+V1,1,0.16666667,2,19,B1310,bit,203,1,Primary Link Status,Primary Link Status,yes
+V1,1,0.16666667,2,20,B1312,bit,204,1,Primary Link ON,Primary Link ON,yes
+V1,1,0.16666667,2,21,B1276,bit,205,1,GNSS1 Degraded,User BIT 76 Error,yes
+V1,1,0.16666667,2,22,B1277,bit,206,1,GNSS2 Degraded,User BIT 77 Error,yes
+V1,1,0.16666667,2,23,B1285,bit,207,1,FBX allow switch to Sticks/Manual modes,FBX allow switch to Sticks/Manual modes ,yes
+V1,1,0.16666667,2,24,P10241,pos_abs,208,96,,,
+V1,1,0.16666667,2,25,R142,real-float32,304,32,,,
+V1,1,0.16666667,2,26,R3130,real-float32,336,32,IAS Filtered,IAS Filtered,yes
+V1,1,0.16666667,2,27,B502,bit,368,1,,,
+V1,1,0.16666667,2,28,B101,bit,369,1,,No valid SRTM at UAV position ,yes
+V1,1,0.16666667,2,29,R3209,real-float32,370,32,GNSS1 Accuracy For ops,GNSS1 Accuracy For ops,yes
+V1,1,0.16666667,2,30,R3210,real-float32,402,32,GNSS2 Accuracy For ops,GNSS2 Accuracy For ops,yes
+V1,1,0.16666667,2,31,B1305,bit,434,1,GNSS1 RTK No Fix,GNSS1 RTK No Fix,yes
+V1,1,0.16666667,2,32,B1245,bit,435,1,Force HDG Phase,Force HDG Phase ,yes
+V1,1,0.16666667,2,33,B134,bit,436,1,,Atmosphere not calibrated ,yes
+V1,1,0.16666667,2,34,B1306,bit,437,1,INS Sensors degraded,User BIT 106 ERROR ,yes
+V1,1,0.16666667,2,35,R3268,real-float32,438,32,SRTM Height,SRTM Height,yes
+V1,1,0.16666667,2,36,R3267,real-float32,470,32,SRTM Valid,,
+V1,1,0.16666667,2,37,R3262,real-float32,502,32,Distance to PCS,Distance to PCS,yes
+V1,1,0.16666667,2,38,R3249,real-float32,534,32,Distance from Selected RH,,
+V1,1,0.16666667,2,39,B1246,bit,566,1,Position not fixed Result,Position not fixed Result ,yes
+V1,1,0.16666667,2,40,B100,bit,567,1,,,
+V1,1,0.16666667,2,41,R400,real-float32,568,32,,Power Input,yes
+V1,1,0.16666667,2,42,R3173,real-float32,600,32,Knobs MSL cmd,Knobs MSL cmd,yes
+V1,1,0.16666667,2,43,R3174,real-float32,632,32,Knobs IAS cmd,Knobs IAS cmd,yes
+V1,1,0.16666667,2,44,R3177,real-float32,664,32,Knobs HDG cmd,Knobs HDG cmd,yes
+V1,1,0.16666667,2,45,B1211,bit,696,1,Knobs MSL mode,,
+V1,1,0.16666667,2,46,R3604,real-float32,697,32,BATT V,BATT V,yes
+V1,1,0.16666667,2,47,B1243,bit,729,1,Wing disarm switch,Wing disarm switch,yes
+V1,1,0.16666667,2,48,R3187,real-float32,730,32,AFL ALT CMD,AFL ALT CMD,yes
+V1,1,0.16666667,2,49,B1250,bit,762,1,AFL MODE CMD,,yes
+V1,1,0.16666667,2,50,B1217,bit,763,1,IAS MANUAL CHANGE UP CMD,,
+V1,1,0.16666667,2,51,B1218,bit,764,1,IAS MANUAL CHANGE DOWN CMD,,
+V1,1,0.16666667,2,52,B1253,bit,765,1,Manual ALT CMD state,,
+V1,1,0.16666667,2,53,R3193,real-float32,766,32,THR,THR,yes
+V1,1,0.16666667,2,54,R3300,real-float32,798,32,L MTR,L MTR,yes
+V1,1,0.16666667,2,55,R3301,real-float32,830,32,R MTR,R MTR,yes
+V1,1,0.16666667,2,56,R3302,real-float32,862,32,T MTR,T MTR,yes
+V1,1,0.16666667,2,57,R209,real-float32,894,32,,Desired MSL (Height Above Mean Sea Level) - Altitude,yes
+V1,1,0.16666667,2,58,R3518,real-float32,926,32,ECU Input Current,ECU Input Current,yes
+V1,1,0.16666667,2,59,R3519,real-float32,958,32,ECU 12V Rail Current,,
+V1,1,0.16666667,2,60,R3611,real-float32,990,32,PMU System Current,PMU System Current,yes
+V1,1,0.16666667,2,61,R3612,real-float32,1022,32,PMU Regulator Current,PMU Regulator Current,yes
+V1,1,0.16666667,2,62,R3252,real-float32,1054,32,ESC1 Current,ESC1 Current -- A,yes
+V1,1,0.16666667,2,63,R3255,real-float32,1086,32,ESC2 Current,ESC2 Current -- A,yes
+V1,1,0.16666667,2,64,R3258,real-float32,1118,32,ESC3 Current,ESC3 Current -- A,yes
+V1,1,0.16666667,2,65,U1008,uinteger16,1150,16,ESC3 Speed,,
+V1,1,0.16666667,2,66,U1007,uinteger16,1166,16,ESC2 Speed,,
+V1,1,0.16666667,2,67,U1006,uinteger16,1182,16,ESC1 Speed,,
+V1,1,0.16666667,2,68,R2057,real-float32,1198,32,,MC CIO Running Frequency,yes
+V1,1,0.16666667,2,69,R503,real-float32,1230,32,,MSL (Height Above Mean Sea Level) - Altitude,yes
+V1,1,0.16666667,2,70,R504,real-float32,1262,32,,AGL (Above Ground Level) – Height,yes
+V1,1,0.16666667,2,71,R3188,real-float32,1294,32,AGL - Height (ft),AGL - Height (ft),yes
+V1,1,0.16666667,2,72,B1232,bit,1326,1,KNOBS MOTORS ARM CMD,KNOBS MOTORS ARM CMD,yes
+V1,1,0.16666667,2,73,B2197,bit,1327,1,Simulation Panel State,,
+V1,1,0.16666667,2,74,U1002,uinteger16,1328,16,IAS CMD Mode,,
+V1,1,0.16666667,2,75,U1003,uinteger16,1344,16,LIDAR STATE,,
+V1,1,0.16666667,2,76,U1004,uinteger16,1360,16,LIDAR AUTO MODE,,
+V1,1,0.16666667,2,77,R2813,real-float32,1376,32,,Wind Velocity in North-East plane (Deprecated),yes
+V1,1,0.16666667,2,78,R3201,real-float32,1408,32,BATT A,BATT A,yes
+V1,1,0.16666667,2,79,B2195,bit,1440,1,Fuel Quantity State,,
+V1,1,0.16666667,2,80,B2198,bit,1441,1,STROBE LIGHT STATE,,yes
+V1,1,0.16666667,2,81,B2199,bit,1442,1,,,yes
+V1,1,0.16666667,2,82,R3200,real-float32,1443,32,Engine Panel Throttle Input,Engine Panel Throttle Input,yes
+V1,1,0.16666667,2,83,B1233,bit,1475,1,KNOBS ENGINE CUT CMD,KNOBS ENGINE CUT CMD,yes
+V1,1,0.16666667,2,84,B1234,bit,1476,1,KNOBS HOLD CMD,KNOBS HOLD CMD,yes
+V1,1,0.16666667,2,85,B1235,bit,1477,1,KNOBS RETURN CMD,KNOBS RETURN CMD,yes
+V1,1,0.16666667,2,86,U1025,uinteger16,1478,16,ESC1 CMD,,
+V1,1,0.16666667,2,87,R3251,real-float32,1494,32,ESC1 Voltage,ESC1 Voltage,yes
+V1,1,0.16666667,2,88,R3254,real-float32,1526,32,ESC2 Voltage,ESC2 Voltage,yes
+V1,1,0.16666667,2,89,U1026,uinteger16,1558,16,ESC2 CMD,,
+V1,1,0.16666667,2,90,R3257,real-float32,1574,32,ESC3 Voltage,ESC3 Voltage,yes
+V1,1,0.16666667,2,91,U1023,uinteger16,1606,16,,,
+V1,1,0.16666667,2,92,B1079,bit,1622,1,ESC3 Status Msg received,Custom msg 69 Rx Error,yes
+V1,1,0.16666667,2,93,B1078,bit,1623,1,ESC2 Status Msg received,Custom msg 68 Rx Error,yes
+V1,1,0.16666667,2,94,B1077,bit,1624,1,ESC1 Status Msg received,Custom msg 67 Rx Error,yes
+V1,1,0.16666667,2,95,B1278,bit,1625,1,Knobs box disconnected,Knobs box disconnected ,yes
+V1,1,0.16666667,2,96,B1314,bit,1626,1,Secondary link ON User Override,Secondary link ON User Override  ,yes
+V1,1,0.16666667,2,97,B1226,bit,1627,1,Simulation Enable,,yes
+V1,1,0.16666667,2,98,R3509,real-float32,1628,32,ECU Sticky Crank 1 Error,,
+V1,1,0.16666667,2,99,R3510,real-float32,1660,32,ECU Sticky Crank 2 error,,
+V1,1,0.16666667,2,100,B1063,bit,1692,1,ECU Sticky Errors Message Received,,
+V1,1,0.16666667,2,101,B1549,bit,1693,1,ECU Sticky Input Voltage Low,ECU Sticky Input Voltage Low ,yes
+V1,1,0.16666667,2,102,B1550,bit,1694,1,ECU Sticky Input Voltage High,ECU Sticky Input Voltage High ,yes
+V1,1,0.16666667,2,103,B1551,bit,1695,1,ECU Sticky Generator Commutation Error,ECU Sticky Generator Commutation Error,yes
+V1,1,0.16666667,2,104,B1552,bit,1696,1,ECU Sticky MAT Sensor Out of Range,ECU Sticky MAT Sensor Out of Range,yes
+V1,1,0.16666667,2,105,B1553,bit,1697,1,ECU Sticky Generator Overcurrent,,
+V1,1,0.16666667,2,106,B1554,bit,1698,1,ECU Sticky CHT1 Sensor Out of Range,ECU Sticky CHT1 Sensor Out of Range,yes
+V1,1,0.16666667,2,107,B1555,bit,1699,1,ECU Sticky Generator Overvoltage,ECU Sticky Generator Overvoltage,yes
+V1,1,0.16666667,2,108,B1556,bit,1700,1,ECU Sticky CHT2 Sensor Out of Range,,
+V1,1,0.16666667,2,109,B1557,bit,1701,1,ECU Sticky Generator Commutator Overtemperature,ECU Sticky Generator Commutator Overtemperature,yes
+V1,1,0.16666667,2,110,B1558,bit,1702,1,ECU Sticky MAP Sensor Out of Range,ECU Sticky MAP Sensor Out of Range,yes
+V1,1,0.16666667,2,111,B1559,bit,1703,1,ECU Sticky Generator Overtemperature,,
+V1,1,0.16666667,2,112,B1560,bit,1704,1,ECU Sticky Fuel Pressure Out of Range,ECU Sticky Fuel Pressure Out of Range,yes
+V1,1,0.16666667,2,113,B1561,bit,1705,1,ECU Sticky Engine/Generator RPM mismatch,ECU Sticky Engine/Generator RPM mismatch,yes
+V1,1,0.16666667,2,114,B1562,bit,1706,1,ECU Sticky Analog TPS Out of Range,ECU Sticky Analog TPS Out of Range,yes
+V1,1,0.16666667,2,115,B1563,bit,1707,1,ECU Sticky CPU Undertemperature,ECU Sticky CPU Undertemperature,yes
+V1,1,0.16666667,2,116,B1564,bit,1708,1,ECU Sticky CPU Overtemperature,ECU Sticky CPU Overtemperature,yes
+V1,1,0.16666667,2,117,B1565,bit,1709,1,ECU Sticky Digital Baro Temp Out of Range,ECU Sticky Digital Baro Temp Out of Range,yes
+V1,1,0.16666667,2,118,B1566,bit,1710,1,ECU Sticky Digital Baro Pressure Out of Range,ECU Sticky Digital Baro Pressure Out of Range,yes
+V1,1,0.16666667,2,119,B1567,bit,1711,1,ECU Sticky CHT1 Undertemperature,ECU Sticky CHT1 Undertemperature,yes
+V1,1,0.16666667,2,120,B1568,bit,1712,1,ECU Sticky CHT1 Overtemperature,ECU Sticky CHT1 Overtemperature,yes
+V1,1,0.16666667,2,121,B1569,bit,1713,1,ECU Sticky Fuel Pressure Low,ECU Sticky Fuel Pressure Low,yes
+V1,1,0.16666667,2,122,B1570,bit,1714,1,ECU Sticky Fuel Pressure High,ECU Sticky Fuel Pressure High ,yes
+V1,1,0.16666667,2,123,B1571,bit,1715,1,ECU Sticky Engine Hard RPM Over,ECU Sticky Engine Hard RPM Over,yes
+V1,1,0.16666667,2,124,B1572,bit,1716,1,ECU Sticky Engine Soft RPM Over,ECU Sticky Engine Soft RPM Over,yes
+V1,1,0.16666667,2,125,B1573,bit,1717,1,ECU Sticky Param Hash Error,ECU Sticky Param Hash Error ,yes
+V1,1,0.16666667,2,126,B1574,bit,1718,1,ECU Sticky 12V Rail Undervoltage,ECU Sticky 12V Rail Undervoltage,yes
+V1,1,0.16666667,2,127,B1575,bit,1719,1,ECU Sticky 12V Rail Overvoltage,ECU Sticky 12V Rail Overvoltage ,yes
+V1,1,0.16666667,2,128,B1576,bit,1720,1,ECU Sticky Input Overcurrent,ECU Sticky Input Overcurrent ,yes
+V1,1,0.16666667,2,129,B1577,bit,1721,1,ECU Sticky Factory Storeage Error,ECU Sticky Factory Storeage Error ,yes
+V1,1,0.16666667,2,130,B1578,bit,1722,1,ECU Sticky 12V Rail Overcurrent,ECU Sticky 12V Rail Overcurrent ,yes
+V1,1,0.16666667,2,131,B1579,bit,1723,1,ECU Sticky 6V Supply Fail,ECU Sticky 6V Supply Fail,yes
+V1,1,0.16666667,2,132,B1580,bit,1724,1,ECU Sticky Injector 1 Fault,ECU Sticky Injector 1 Fault ,yes
+V1,1,0.16666667,2,133,B1581,bit,1725,1,ECU Sticky Injector 2 Fault,,
+V1,1,0.16666667,2,134,B1582,bit,1726,1,ECU Sticky User Storage Error,ECU Sticky User Storage Error,yes
+V1,1,0.16666667,2,135,B1583,bit,1727,1,ECU Sticky Analog Baro Pressure Out of Range,ECU Sticky Analog Baro Pressure Out of Range ,yes
+V1,1,0.16666667,2,136,B1584,bit,1728,1,ECU Sticky CAN Thottle Missing,ECU Sticky CAN Thottle Missing,yes
+V1,1,0.16666667,2,137,B1585,bit,1729,1,ECU Sticky CAN Throttle Error,ECU Sticky CAN Throttle Error,yes
+V1,1,0.16666667,2,138,B1586,bit,1730,1,ECU Sticky Disabled by Throttle,ECU Sticky Disabled by Throttle,yes
+V1,1,0.16666667,2,139,B1587,bit,1731,1,ECU Sticky MAP Low,ECU Sticky MAP Low ,yes
+V1,1,0.16666667,2,140,B1588,bit,1732,1,ECU Sticky MAP High,ECU Sticky MAP High ,yes
+V1,1,0.16666667,2,141,B1589,bit,1733,1,ECU Sticky TPS Missing,ECU Sticky TPS Missing ,yes
+V1,1,0.16666667,2,142,B1590,bit,1734,1,ECU Sticky TPS Error,ECU Sticky TPS Error ,yes
+V1,1,0.16666667,2,143,B1591,bit,1735,1,ECU Sticky SD Card Error,ECU Sticky SD Card Error ,yes
+V1,1,0.16666667,2,144,B1592,bit,1736,1,ECU Sticky CAN Generator Missing,ECU Sticky CAN Generator Missing,yes
+V1,1,0.16666667,2,145,B1593,bit,1737,1,ECU Sticky Maintenance Needed,ECU Sticky Maintenance Needed,yes
+V1,1,0.16666667,2,146,B1594,bit,1738,1,ECU Sticky Test Mode Active,ECU Sticky Test Mode Active ,yes
+V1,1,0.16666667,2,147,B1754,bit,1739,1,PMU Sticky Wear Data to Save,PMU Sticky Wear Data to Save,yes
+V1,1,0.16666667,2,148,B1755,bit,1740,1,PMU Sticky Main Regulator Fault,PMU Sticky Main Regulator Fault ,yes
+V1,1,0.16666667,2,149,B1756,bit,1741,1,PMU Sticky Rectifier Fault,PMU Sticky Rectifier Fault ,yes
+V1,1,0.16666667,2,150,B1757,bit,1742,1,PMU Sticky Regulator Low Voltage A Fault,PMU Sticky Regulator Low Voltage A Fault ,yes
+V1,1,0.16666667,2,151,B1758,bit,1743,1,PMU Sticky Regulator Low Voltage B Fault,PMU Sticky Regulator Low Voltage B Fault ,yes
+V1,1,0.16666667,2,152,B1759,bit,1744,1,PMU Sticky Generator Temperature Sensor Out of Range,PMU Sticky Generator Temperature Sensor Out of Range ,yes
+V1,1,0.16666667,2,153,B1760,bit,1745,1,PMU Sticky Generator Hot,PMU Sticky Generator Hot ,yes
+V1,1,0.16666667,2,154,B1761,bit,1746,1,PMU Sticky CPU Hot,PMU Sticky CPU Hot,yes
+V1,1,0.16666667,2,155,B1762,bit,1747,1,PMU Sticky Regulator Hot,PMU Sticky Regulator Hot ,yes
+V1,1,0.16666667,2,156,B1763,bit,1748,1,PMU Sticky Rectifier Hot,PMU Sticky Rectifier Hot ,yes
+V1,1,0.16666667,2,157,B1764,bit,1749,1,PMU Sticky Backup Battery Voltage Low,,
+V1,1,0.16666667,2,158,B1765,bit,1750,1,PMU Sticky Backup Battery Voltage High,,
+V1,1,0.16666667,2,159,B1766,bit,1751,1,PMU Sticky High Voltage Value Low,PMU Sticky High Voltage Value Low ,yes
+V1,1,0.16666667,2,160,B1767,bit,1752,1,PMU Sticky High Voltage Value High,PMU Sticky High Voltage Value High ,yes
+V1,1,0.16666667,2,161,B1768,bit,1753,1,PMU Sticky Generator Voltage Low,PMU Sticky Generator Voltage Low ,yes
+V1,1,0.16666667,2,162,B1769,bit,1754,1,PMU Sticky Generator Voltage High,PMU Sticky Generator Voltage High ,yes
+V1,1,0.16666667,2,163,B1770,bit,1755,1,PMU Sticky Generator Current High,PMU Sticky Generator Current High ,yes
+V1,1,0.16666667,2,164,B1771,bit,1756,1,PMU Sticky High Voltage Battery Hot,,
+V1,1,0.16666667,2,165,B1772,bit,1757,1,PMU Sticky High Voltage Battery Current High,PMU Sticky High Voltage Battery Current High ,yes
+V1,1,0.16666667,2,166,B1773,bit,1758,1,PMU Sticky Regulator Current High,PMU Sticky Regulator Current High ,yes
+V1,1,0.16666667,2,167,B1774,bit,1759,1,PMU Sticky Direction Wrong,PMU Sticky Direction Wrong,yes
+V1,1,0.16666667,2,168,B1775,bit,1760,1,PMU Sticky Hall U Error,,
+V1,1,0.16666667,2,169,B1776,bit,1761,1,PMU Sticky Hall V Error,,
+V1,1,0.16666667,2,170,B1777,bit,1762,1,PMU Sticky Hall W Error,,
+V1,1,0.16666667,2,171,B1778,bit,1763,1,PMU Sticky Hall Pattern Error,,
+V1,1,0.16666667,2,172,B1779,bit,1764,1,PMU Sticky Sensorless Pattern Error,PMU Sticky Sensorless Pattern Error,yes
+V1,1,0.16666667,2,173,B1780,bit,1765,1,PMU Sticky Sensorless Mismatch,PMU Sticky Sensorless Mismatch,yes
+V1,1,0.16666667,2,174,B1781,bit,1766,1,PMU Sticky RPM High,PMU Sticky RPM High ,yes
+V1,1,0.16666667,2,175,B1782,bit,1767,1,PMU Sticky Parameter Mismatch,PMU Sticky Parameter Mismatch ,yes
+V1,1,0.16666667,2,176,B1783,bit,1768,1,PMU Sticky Storage Error,PMU Sticky Storage Error ,yes
+V1,1,0.16666667,2,177,B1784,bit,1769,1,PMU Sticky Data to Save,PMU Sticky Data to Save,yes
+V1,1,0.16666667,2,178,B1785,bit,1770,1,PMU Sticky Test Mode Active,PMU Sticky Test Mode Active ,yes
+V1,1,0.16666667,2,179,B1275,bit,1771,1,IAS offset calibration done,User BIT 75 Error,yes
+V1,1,0.16666667,2,180,B1274,bit,1772,1,Speed calibration cmd,,
+V1,1,0.16666667,2,181,B1248,bit,1773,1,Test Flight,Test Flight,yes
+V1,1,0.16666667,2,182,R3500,real-float32,1774,32,ECU Throttle Cmd,ECU Throttle Cmd,yes
+V1,1,0.16666667,2,183,R3501,real-float32,1806,32,ECU TPS,,
+V1,1,0.16666667,2,184,R3502,real-float32,1838,32,CHT,CHT,yes
+V1,1,0.16666667,2,185,R3503,real-float32,1870,32,ECU MAT,ECU MAT,yes
+V1,1,0.16666667,2,186,R3505,real-float32,1902,32,ECU Baro,,
+V1,1,0.16666667,2,187,R3512,real-float32,1934,32,ECU Fuel Pressure,,
+V1,1,0.16666667,2,188,R3513,real-float32,1966,32,ECU Fuel Pump Duty Cycle,ECU Fuel Pump Duty Cycle,yes
+V1,1,0.16666667,2,189,R3514,real-float32,1998,32,ECU Throttle Output,,
+V1,1,0.16666667,2,190,R3516,real-float32,2030,32,ECU Input Voltage,ECU Input Voltage,yes
+V1,1,0.16666667,2,191,R3517,real-float32,2062,32,ECU 12V Rail Voltage,,
+V1,1,0.16666667,2,192,R3600,real-float32,2094,32,PMU RPM,PMU RPM,yes
+V1,1,0.16666667,2,193,R3211,real-float32,2126,32,PMU RPM Corrected for OPS,,
+V1,1,0.16666667,2,194,R3601,real-float32,2158,32,PMU PWM Duty Cycle,PMU PWM Duty Cycle,yes
+V1,1,0.16666667,2,195,R3602,real-float32,2190,32,PMU Generator Voltage,PMU Generator Voltage,yes
+V1,1,0.16666667,2,196,R3603,real-float32,2222,32,PMU Main Voltage,PMU Main Voltage,yes
+V1,1,0.16666667,2,197,R3610,real-float32,2254,32,PMU Operational Mode,PMU Operational Mode,yes
+V1,1,0.16666667,2,198,R2050,real-float32,2286,32,,Acquisition Task Average CPU Ratio,yes
+V1,1,0.16666667,2,199,R2051,real-float32,2318,32,,Acquisition Task Maximum CPU Ratio,yes
+V1,1,0.16666667,2,200,R2094,real-float32,2350,32,,GNC Task Average CPU Ratio,yes
+V1,1,0.16666667,2,201,R2095,real-float32,2382,32,,GNC Task Maximum CPU Ratio,yes
+V1,1,0.16666667,2,202,B1602,bit,2414,1,ECU Self Crank Active,,
+V1,1,0.16666667,2,203,B1070,bit,2415,1,PMU Fast Telemetry 1 Message Received,PMU Fast Telemetry 1 Message Received,yes
+V1,1,0.16666667,2,204,B1060,bit,2416,1,ECU Fast Telemetry Message Received,ECU Fast Telemetry Message Received,yes
+V1,1,0.16666667,2,205,R3208,real-float32,2417,32,Fuel Flow l/h,Fuel Flow l/h,yes
+V1,1,0.16666667,2,206,B1266,bit,2449,1,Stick detected since power up,,yes
+V1,1,0.16666667,2,207,R3189,real-float32,2450,32,Desired AGL (ft),Desired AGL (ft),yes
+V1,1,0.16666667,2,208,B1212,bit,2482,1,Flying FW,Flying FW,yes
+V1,1,0.16666667,2,209,B1213,bit,2483,1,Flying multi,Flying multi,yes
+V1,1,0.16666667,2,210,B1214,bit,2484,1,Flying transition,Flying transition,yes
+V1,1,0.16666667,2,211,U1005,uinteger16,2485,16,Engine State,Engine State,yes
+V1,1,0.16666667,2,212,R3622,real-float32,2501,32,PMU Switched Output Duty Cycle,,
+V1,1,0.16666667,2,213,R3181,real-float32,2533,32,ROC,ROC,yes
+V1,1,0.16666667,2,214,B1900,bit,2565,1,Simulator Link status CMD,Simulator Link status CMD,yes
+V1,1,0.16666667,2,215,B1240,bit,2566,1,Tech mode,,
+V1,1,0.16666667,2,216,B1501,bit,2567,1,ECU User Enable,,yes
+V1,1,0.16666667,2,217,B403,bit,2568,1,,,
+V1,1,0.16666667,2,218,B401,bit,2569,1,,GNC Fail,yes
+V1,1,0.16666667,2,219,B73,bit,2570,1,,CAN-A Error,yes
+V1,1,0.16666667,2,220,B74,bit,2571,1,,CAN-B Error,yes
+V1,1,0.16666667,2,221,B106,bit,2572,1,,Magnetic field out of bounds (Deprecated),yes
+V1,1,0.16666667,2,222,B117,bit,2573,1,,Main Power Error,yes
+V1,1,0.16666667,2,223,B133,bit,2574,1,,Operation Error,yes
+V1,1,0.16666667,2,224,B57,bit,2575,1,,Sensor-Static pressure 1,yes
+V1,1,0.16666667,2,225,R3180,real-float32,2576,32,UAV WEIGHT INPUT,UAV WEIGHT INPUT,yes
+V1,1,0.16666667,2,226,R3182,real-float32,2608,32,UAV WEIGHT OUTPUT,UAV WEIGHT OUTPUT,yes
+V1,1,0.16666667,2,227,B2196,bit,2640,1,UAV WEIGHT STATE,,
+V1,1,0.16666667,2,228,B1236,bit,2641,1,SIM KNOBS MOTORS ARM CMD,SIM KNOBS MOTORS ARM CMD ,yes
+V1,1,0.16666667,2,229,B1237,bit,2642,1,SIM KNOBS ENGINE CUT CMD,SIM KNOBS ENGINE CUT CMD ,yes
+V1,1,0.16666667,2,230,B1238,bit,2643,1,SIM KNOBS HOLD CMD,SIM KNOBS HOLD CMD ,yes
+V1,1,0.16666667,2,231,B1239,bit,2644,1,SIM KNOBS RETURN CMD,SIM KNOBS RETURN CMD ,yes
+V1,1,0.16666667,2,232,B1241,bit,2645,1,Wing enable sim CMD,Wing enable sim CMD,yes
+V1,1,0.16666667,2,233,B1244,bit,2646,1,Sim Position not fix,Sim Position not fix,yes
+V1,1,0.16666667,2,234,B1355,bit,2647,1,Engine CUT,Engine CUT  ,yes
+V1,1,0.16666667,2,235,B1247,bit,2648,1,Motors arm Software Enable,,
+V1,1,0.16666667,2,236,B1294,bit,2649,1,ESC3 Temp high,ESC3 Temp high ,yes
+V1,1,0.16666667,2,237,B1284,bit,2650,1,ESC1 Temp high,ESC1 Temp high ,yes
+V1,1,0.16666667,2,238,B1293,bit,2651,1,ESC2 Temp high,ESC2 Temp high ,yes
+V1,1,0.16666667,2,239,R1529,real-float32,2652,32,,,
+V1,1,0.16666667,2,240,R1629,real-float32,2684,32,,,
+V1,1,0.16666667,2,241,R1506,real-float32,2716,32,,,
+V1,1,0.16666667,2,242,R3605,real-float32,2748,32,PMU Generator Current,PMU Generator Current,yes
+V1,1,0.16666667,2,243,R3607,real-float32,2780,32,PMU High Voltage Current,,yes
+V1,1,0.16666667,2,244,B1295,bit,2812,1,ESC1 Current high,ESC1 Current high ,yes
+V1,1,0.16666667,2,245,B1296,bit,2813,1,ESC2 Current high,ESC2 Current high ,yes
+V1,1,0.16666667,2,246,B1297,bit,2814,1,ESC3 Current high,ESC3 Current high ,yes
+V1,1,0.16666667,2,247,B1255,bit,2815,1,Enable energy control,Enable energy control ,yes
+V1,1,0.16666667,2,248,B9,bit,2816,1,,PDI Error,yes
+V1,1,0.16666667,2,249,B58,bit,2817,1,,Sensor-Dynamic pressure,yes
+V1,1,0.16666667,2,250,B1030,bit,2818,1,SKYE2 Raw Air Data,SKYE2 Raw Air Data,yes
+V1,1,0.16666667,2,251,R3499,real-float32,2819,32,ECU RPM,ECU RPM -- rpm,yes
+V1,1,0.16666667,2,252,U117,uinteger16,2851,16,,GNSS1 Fix Type,yes
+V1,1,0.16666667,2,253,U167,uinteger16,2867,16,,GNSS2 Fix Type,yes
+V1,1,0.16666667,2,254,R0,real-float32,2883,32,,,
+V1,1,0.16666667,2,255,R3253,real-float32,2915,32,ESC1 Temperature,ESC1 Temperature,yes
+V1,1,0.16666667,2,256,R3256,real-float32,2947,32,ESC2 Temperature,ESC2 Temperature,yes
+V1,1,0.16666667,2,257,R3259,real-float32,2979,32,ESC3 Temperature,ESC3 Temperature,yes
+V1,1,0.16666667,2,258,B2050,bit,3011,1,ESC1 ENCODER ERROR,ESC1 ENCODER ERROR,yes
+V1,1,0.16666667,2,259,B2051,bit,3012,1,ESC2 ENCODER ERROR,ESC2 ENCODER ERROR,yes
+V1,1,0.16666667,2,260,B2052,bit,3013,1,ESC3 ENCODER ERROR,ESC3 ENCODER ERROR,yes
+V1,1,0.16666667,2,261,B2053,bit,3014,1,ESC1 LOW BRIDGE FAULT,ESC1 LOW BRIDGE FAULT,yes
+V1,1,0.16666667,2,262,B2054,bit,3015,1,ESC2 LOW BRIDGE FAULT,ESC2 LOW BRIDGE FAULT,yes
+V1,1,0.16666667,2,263,B2055,bit,3016,1,ESC3 LOW BRIDGE FAULT,ESC3 LOW BRIDGE FAULT,yes
+V1,1,0.16666667,2,264,B2056,bit,3017,1,ESC1 UP BRIDGE FAULT,ESC1 UP BRIDGE FAULT,yes
+V1,1,0.16666667,2,265,B2057,bit,3018,1,ESC2 UP BRIDGE FAULT,ESC2 UP BRIDGE FAULT,yes
+V1,1,0.16666667,2,266,B2058,bit,3019,1,ESC3 UP BRIDGE FAULT,ESC3 UP BRIDGE FAULT,yes
+V1,1,0.16666667,2,267,B2059,bit,3020,1,ESC1 OPERATIONAL AMPLIFIER FAULT,ESC1 OPERATIONAL AMPLIFIER FAULT,yes
+V1,1,0.16666667,2,268,B2060,bit,3021,1,ESC2 OPERATIONAL AMPLIFIER FAULT,ESC2 OPERATIONAL AMPLIFIER FAULT,yes
+V1,1,0.16666667,2,269,B2061,bit,3022,1,ESC3 OPERATIONAL AMPLIFIER FAULT,ESC3 OPERATIONAL AMPLIFIER FAULT,yes
+V1,1,0.16666667,2,270,B2062,bit,3023,1,ESC1 STALL,ESC1 STALL,yes
+V1,1,0.16666667,2,271,B2063,bit,3024,1,ESC2 STALL,ESC2 STALL,yes
+V1,1,0.16666667,2,272,B2064,bit,3025,1,ESC3 STALL,ESC3 STALL,yes
+V1,1,0.16666667,2,273,B2065,bit,3026,1,ESC1 CAPACITOR HOT,ESC1 CAPACITOR HOT,yes
+V1,1,0.16666667,2,274,B2066,bit,3027,1,ESC2 CAPACITOR HOT,ESC2 CAPACITOR HOT,yes
+V1,1,0.16666667,2,275,B2067,bit,3028,1,ESC3 CAPACITOR HOT,ESC3 CAPACITOR HOT,yes
+V1,1,0.16666667,2,276,B2068,bit,3029,1,ESC1 MOSFET HOT,ESC1 MOSFET HOT,yes
+V1,1,0.16666667,2,277,B2069,bit,3030,1,ESC2 MOSFET HOT,ESC2 MOSFET HOT,yes
+V1,1,0.16666667,2,278,B2070,bit,3031,1,ESC3 MOSFET HOT,ESC3 MOSFET HOT,yes
+V1,1,0.16666667,2,279,B2071,bit,3032,1,ESC1 THROTTLE ABNORMAL,ESC1 THROTTLE ABNORMAL,yes
+V1,1,0.16666667,2,280,B2072,bit,3033,1,ESC2 THROTTLE ABNORMAL,ESC2 THROTTLE ABNORMAL,yes
+V1,1,0.16666667,2,281,B2073,bit,3034,1,ESC3 THROTTLE ABNORMAL,ESC3 THROTTLE ABNORMAL,yes
+V1,1,0.16666667,2,282,B2074,bit,3035,1,ESC1 THROTTLE LOSS,ESC1 THROTTLE LOSS,yes
+V1,1,0.16666667,2,283,B2075,bit,3036,1,ESC2 THROTTLE LOSS,ESC2 THROTTLE LOSS,yes
+V1,1,0.16666667,2,284,B2076,bit,3037,1,ESC3 THROTTLE LOSS,ESC3 THROTTLE LOSS,yes
+V1,1,0.16666667,2,285,B2077,bit,3038,1,ESC1 OVERCURRENT,ESC1 OVERCURRENT,yes
+V1,1,0.16666667,2,286,B2078,bit,3039,1,ESC2 OVERCURRENT,ESC2 OVERCURRENT,yes
+V1,1,0.16666667,2,287,B2079,bit,3040,1,ESC3 OVERCURRENT,ESC3 OVERCURRENT,yes
+V1,1,0.16666667,2,288,B2080,bit,3041,1,ESC1 UNDERVOLTAGE,ESC1 UNDERVOLTAGE,yes
+V1,1,0.16666667,2,289,B2081,bit,3042,1,ESC2 UNDERVOLTAGE,ESC2 UNDERVOLTAGE,yes
+V1,1,0.16666667,2,290,B2082,bit,3043,1,ESC3 UNDERVOLTAGE,ESC3 UNDERVOLTAGE,yes
+V1,1,0.16666667,2,291,B2085,bit,3044,1,ESC3 OVERVOLTAGE,ESC3 OVERVOLTAGE,yes
+V1,1,0.16666667,2,292,B2084,bit,3045,1,ESC2 OVERVOLTAGE,ESC2 OVERVOLTAGE,yes
+V1,1,0.16666667,2,293,B2083,bit,3046,1,ESC1 OVERVOLTAGE,ESC1 OVERVOLTAGE,yes
+V1,1,0.16666667,2,294,B1269,bit,3047,1,ESC3 Status Msg,,
+V1,1,0.16666667,2,295,B1268,bit,3048,1,ESC2 Status Msg,,
+V1,1,0.16666667,2,296,B1267,bit,3049,1,ESC1 Status Msg,,
+V1,1,0.16666667,2,297,B1308,bit,3050,1,Fuel Level Critical,Fuel Level Critical,yes
+V1,1,0.16666667,2,298,B1307,bit,3051,1,Fuel Level Low,Fuel Level Low,yes
+V1,1,0.16666667,2,299,B1309,bit,3052,1,Fuel Temperature High,Fuel Temperature High,yes
+V1,1,0.16666667,2,300,B1316,bit,3053,1,Roll Exceeds Limits,Roll Exceeds Limits,yes
+V1,1,0.16666667,2,301,B1315,bit,3054,1,Pitch Exceeds Limits,Pitch Exceeds Limits,yes
+V1,1,0.16666667,2,302,B1322,bit,3055,1,High Speed Exceeded Major,High Speed Exceeded Major,yes
+V1,1,0.16666667,2,303,B1321,bit,3056,1,High Speed Exceeded Minor,High Speed Exceeded Minor,yes
+V1,1,0.16666667,2,304,B1320,bit,3057,1,Low Speed Exceeded Major,Low Speed Exceeded Major,yes
+V1,1,0.16666667,2,305,B1319,bit,3058,1,Low Speed Exceeded Minor,Low Speed Exceeded Minor,yes
+V1,1,0.16666667,2,306,B1317,bit,3059,1,Battery Over Current Major,Battery High Current,yes
+V1,1,0.16666667,2,307,B1318,bit,3060,1,Battery Over Current Minor,Battery High Current,yes
+V1,1,0.16666667,2,308,B1323,bit,3061,1,Battery Under Voltage Major,Battery Low Voltage,yes
+V1,1,0.16666667,2,309,B1324,bit,3062,1,Battery Under Voltage Minor,Battery Low Voltage,yes
+V1,1,0.16666667,2,310,B1325,bit,3063,1,Battery Over Voltage Major,Battery High Voltage,yes
+V1,1,0.16666667,2,311,B1249,bit,3064,1,One time message request,,
+V1,1,0.16666667,2,312,B1260,bit,3065,1,SRTM selected for AGL,,
+V1,1,0.16666667,2,313,B1261,bit,3066,1,Lidar selected for AGL,,
+V1,1,0.16666667,2,314,R3205,real-float32,3067,32,AGL Rounded cmd,AGL Rounded cmd,yes
+V1,1,0.16666667,2,315,R3206,real-float32,3099,32,MSL rounded cmd,MSL rounded cmd,yes
+V1,1,0.16666667,2,316,R3207,real-float32,3131,32,Next Point Alt,,
+V1,1,0.16666667,2,317,B1256,bit,3163,1,Hold CW Operator CMD,User BIT 56 ERROR,yes
+V1,1,0.16666667,2,318,R3234,real-float32,3164,32,RH Delay timer,RH delay timer,yes
+V1,1,0.16666667,2,319,R3531,real-float32,3196,32,ECU Fuel Pressure Display,ECU Fuel Pressure Display,yes
+V1,1,0.16666667,2,320,B1265,bit,3228,1,Enable FDR Telemetry,,
+V1,1,0.16666667,2,321,R3303,real-float32,3229,32,Wind Azimuth (GUI),Wind Azimuth (GUI),yes
+V1,1,0.16666667,2,322,B1259,bit,3261,1,Enable RTK,,
+V1,1,0.16666667,2,323,B1262,bit,3262,1,Enable RTK CMD,Enable RTK CMD,yes
+V1,1,0.16666667,2,324,B59,bit,3263,1,,,
+V1,1,0.16666667,2,325,B1263,bit,3264,1,Motors sync OK,Motors sync OK,yes
+V1,1,0.16666667,2,326,B1327,bit,3265,1,Lidar I2c Serviceable,Lidar I2c Serviceable ,yes
+V1,1,0.16666667,2,327,R1509,real-float32,3266,32,,GNSS1 PDOP,yes
+V1,1,0.16666667,2,328,R1609,real-float32,3298,32,,GNSS2 PDOP,yes
+V2,1,2.0,2,0,U100,uinteger16,0,16,,GNSS1 Number of Satellites Used in Solution,yes
+V2,1,2.0,2,1,U150,uinteger16,16,16,,GNSS2 Number of Satellites Used in Solution,yes
+V2,1,2.0,2,2,R3226,real-float32,32,32,SKYE2 Pitot Temp,,
+V2,1,2.0,2,3,R405,real-float32,64,32,,CPU Temperature,yes
+V2,1,2.0,2,4,R3506,real-float32,96,32,ECU Temp Digital,,
+V2,1,2.0,2,5,R3620,real-float32,128,32,PMU Generator Temperature,PMU Generator Temperature,yes
+V2,1,2.0,2,6,R3625,real-float32,160,32,PMU Regulator Temperature,PMU Regulator Temperature,yes
+V2,1,2.0,2,7,R3621,real-float32,192,32,PMU Power Board Temperature,PMU Power Board Temperature,yes
+V2,1,2.0,2,8,R3521,real-float32,224,32,ECU Fuel Consumed in g,,
+V2,1,2.0,2,9,R3401,real-float32,256,32,Fuel Temperature,Fuel Temperature,yes
+V2,1,2.0,2,10,R3186,real-float32,288,32,,,
+V2,1,2.0,2,11,R3185,real-float32,320,32,Fuel Level Mass,Fuel Level Mass,yes
+V2,1,2.0,2,12,R3400,real-float32,352,32,Fuel Level Sensor,Fuel Level Sensor,yes
+V2,1,2.0,2,13,R2900,real-float32,384,32,,,
+V2,1,2.0,2,14,R1404,real-float32,416,32,,Barometric Pressure at Sea Level (QNH),yes
+V2,1,2.0,2,15,R3183,real-float32,448,32,Fuel Quantity Input,Fuel Quantity Input,yes
+V2,1,2.0,2,16,R3215,real-float32,480,32,Fuel Remaining Calculated,Fuel Remaining Calculated,yes
+V2,1,2.0,2,17,R4024,real-float32,512,32,Servo Elevator R Temp FBK,Servo Elevator R Temp FBK,yes
+V2,1,2.0,2,18,R4025,real-float32,544,32,Servo Elevator L Temp FBK,Servo Elevator L Temp FBK,yes
+V2,1,2.0,2,19,R4026,real-float32,576,32,Servo Aileron R Temp FBK,Servo Aileron R Temp FBK,yes
+V2,1,2.0,2,20,R4027,real-float32,608,32,Servo Aileron L Temp FBK,Servo Aileron L Temp FBK,yes
+V2,1,2.0,2,21,R4028,real-float32,640,32,Servo Rudder Temp FBK,Servo Rudder Temp FBK,yes
+V2,1,2.0,2,22,R4029,real-float32,672,32,Servo Tilt Temp FBK,Servo Tilt Temp FBK,yes
+V3,1249,1.0,2,0,U1040,uinteger16,0,16,SW VERSION MAJOR,SW VERSION MAJOR,yes
+V3,1249,1.0,2,1,U1041,uinteger16,16,16,SW VERSION MINOR,SW VERSION MINOR,yes
+V3,1249,1.0,2,2,U1042,uinteger16,32,16,SW VERSION PATCH,SW VERSION PATCH,yes
+V3,1249,1.0,2,3,U1043,uinteger16,48,16,SW VERSION HASH,,
+V3,1249,1.0,2,4,U1044,uinteger16,64,16,SW VERSION DIRTY,SW VERSION DIRTY,yes
+V3,1249,1.0,2,5,U1045,uinteger16,80,16,SW VERSION CRC HIGH,SW VERSION CRC HIGH,yes
+V3,1249,1.0,2,6,U1046,uinteger16,96,16,SW VERSION CRC LOW,SW VERSION CRC LOW,yes
+V3,1249,1.0,2,7,U95,uinteger16,112,16,,UAV hardware address,yes
+V4,1248,0.1,2,0,R13,real-float32,0,32,,,
+V4,1248,0.1,2,1,R12,real-float32,32,32,,,
+V4,1248,0.1,2,2,R14,real-float32,64,32,,,
+V4,1248,0.1,2,3,R119,real-float32,96,32,,,
+V4,1248,0.1,2,4,R19,real-float32,128,32,,,
+V4,1248,0.1,2,5,R20,real-float32,160,32,,,
+V4,1248,0.1,2,6,R120,real-float32,192,32,,,
+V4,1248,0.1,2,7,R107,real-float32,224,32,,Desired Pitch,yes
+V4,1248,0.1,2,8,R108,real-float32,256,32,,Desired Roll,yes
+V4,1248,0.1,2,9,R106,real-float32,288,32,,,
+V4,1248,0.1,2,10,R113,real-float32,320,32,,,
+V4,1248,0.1,2,11,R112,real-float32,352,32,,,
+V4,1248,0.1,2,12,R114,real-float32,384,32,,,
+V4,1248,0.1,2,13,R0,real-float32,416,32,,,
+V4,1248,0.1,2,14,R1050,real-float32,448,32,Pitching (Q) Before Servo Saturation,,
+V4,1248,0.1,2,15,R2404,real-float32,480,32,Pitching (P),,
+V4,1248,0.1,2,16,R1051,real-float32,512,32,Thrusting (Q) Before Servo Saturation,,
+V4,1248,0.1,2,17,R2405,real-float32,544,32,Thrusting (P),,
+V4,1248,0.1,2,18,R2406,real-float32,576,32,Rolling (P),,
+V4,1248,0.1,2,19,R1052,real-float32,608,32,Rolling (Q) Before Servo Saturation,,
+V4,1248,0.1,2,20,R3124,real-float32,640,32,Arc - Pitch,,
+V4,1248,0.1,2,21,R3125,real-float32,672,32,Arc - Roll,,
+V4,1248,0.1,2,22,R3126,real-float32,704,32,Arc - Throttle,,
+V4,1248,0.1,2,23,R3127,real-float32,736,32,Arc - Yaw,,
+V4,1248,0.1,2,24,R1053,real-float32,768,32,Yawing (Q) Before Servo Saturation,,
+V4,1248,0.1,2,25,R2407,real-float32,800,32,Yawing (P),,
+V4,1248,0.1,2,26,R4,real-float32,832,32,,,
+V4,1248,0.1,2,27,R104,real-float32,864,32,,,
+V4,1248,0.1,2,28,R3118,real-float32,896,32,Control mix,,
+V4,1248,0.1,2,29,R3175,real-float32,928,32,Control mix 2,,
+V4,1248,0.1,2,30,R3176,real-float32,960,32,Control mix 3,,
+V4,1248,0.1,2,31,R102,real-float32,992,32,,,
+V4,1248,0.1,2,32,R507,real-float32,1024,32,,,
+V4,1248,0.1,2,33,R202,real-float32,1056,32,,,
+V4,1248,0.1,2,34,R2000,real-float32,1088,32,,,
+V4,1248,0.1,2,35,R2001,real-float32,1120,32,,,
+V4,1248,0.1,2,36,R3239,real-float32,1152,32,NIS ARRAY [0] GNSS1 POS,,
+V4,1248,0.1,2,37,R3240,real-float32,1184,32,NIS ARRAY [1] GNSS1 VEL,,
+V4,1248,0.1,2,38,R3241,real-float32,1216,32,NIS ARRAY [2] GNSS2 POS,,
+V4,1248,0.1,2,39,R3242,real-float32,1248,32,NIS ARRAY [3] GNSS2 VEL,,
+V4,1248,0.1,2,40,R3243,real-float32,1280,32,NIS ARRAY [4] MAG,,
+V4,1248,0.1,2,41,R3244,real-float32,1312,32,NIS ARRAY [5] S PRES,,
+V4,1248,0.1,2,42,R3245,real-float32,1344,32,NIS ARRAY [6] AGL,,
+V4,1248,0.1,2,43,R3246,real-float32,1376,32,NIS ARRAY [7] LIDAR,,
+V4,1248,0.1,2,44,R1708,real-float32,1408,32,Rudder,,
+V4,1248,0.1,2,45,R1705,real-float32,1440,32,Left Elevator,,
+V4,1248,0.1,2,46,R1707,real-float32,1472,32,Left Aileron,,
+V4,1248,0.1,2,47,B1221,bit,1504,1,Imbalance Pitch (Q),,
+V4,1248,0.1,2,48,B1222,bit,1505,1,Imbalance Roll (Q),,
+V4,1248,0.1,2,49,B1223,bit,1506,1,Imbalance Yaw (Q),,
+V4,1248,0.1,2,50,B1224,bit,1507,1,Imbalance Pitch (P),,
+V4,1248,0.1,2,51,B1225,bit,1508,1,Imbalance Roll (P),,
+V4,1248,0.1,2,52,B1231,bit,1509,1,Imbalance Yaw (P),,
+V4,1248,0.1,2,53,B1299,bit,1510,1,Test flight Low Altitude landing,,
+V4,1248,0.1,2,54,B1255,bit,1511,1,Enable energy control,Enable energy control ,yes
+V4,1248,0.1,2,55,B1254,bit,1512,1,Enable passenger telemetry,Enable passenger telemetry,yes
+V4,1248,0.1,2,56,R127,real-float32,1513,32,,,
+V4,1248,0.1,2,57,R126,real-float32,1545,32,,,
+V4,1248,0.1,2,58,B1793,bit,1577,1,FPA filter on,,
+V4,1248,0.1,2,59,R3264,real-float32,1578,32,Air Flight path angle,,
+V4,1248,0.1,2,60,R3122,real-float32,1610,32,Desired Energy Rate error,,
+V4,1248,0.1,2,61,R3123,real-float32,1642,32,Desired Energy Distribution error,,
+V4,1248,0.1,2,62,R3475,real-float32,1674,32,TECS Roll Comp Gain,,
+V4,1248,0.1,2,63,R3476,real-float32,1706,32,Tecs Trottle Gain Roll,,
+V4,1248,0.1,2,64,R3296,real-float32,1738,32,Desired Air FPA,,
+V4,1248,0.1,2,65,R3441,real-float32,1770,32,Throttle FF Rate Limit U,,
+V4,1248,0.1,2,66,R3442,real-float32,1802,32,Throttle FF Rate Limit D,,
+V5,1254,0.1,2,0,R3330,real-float32,0,32,Passenger Yaw,,
+V5,1254,0.1,2,1,R3331,real-float32,32,32,Passenger Pitch,,
+V5,1254,0.1,2,2,R3332,real-float32,64,32,Passenger Roll,,
+V5,1254,0.1,2,3,R3333,real-float32,96,32,Passenger Distance to Flying AP,,
+V5,1254,0.1,2,4,R3334,real-float32,128,32,Passenger GNSS-Airspeed Velocity Delta,,
+V5,1254,0.1,2,5,R3335,real-float32,160,32,Passenger-Flying Yaw Delta,,
+V5,1254,0.1,2,6,R3336,real-float32,192,32,Passenger-Flying Pitch Delta,,
+V5,1254,0.1,2,7,R3337,real-float32,224,32,Passenger-Flying Roll Delta,,
+V5,1254,0.1,2,8,B2000,bit,256,1,Passenger GNSS Fusion Enable,,
+V5,1254,0.1,2,9,B2001,bit,257,1,Passenger Airspeed Fusion Enable,,
+V5,1254,0.1,2,10,B2002,bit,258,1,Passenger Cruise Speed Fusion Enable,,
+V5,1254,0.1,2,11,B2003,bit,259,1,Passenger GNSS Fusion Enable FBK,,
+V5,1254,0.1,2,12,B2004,bit,260,1,Passenger Airspeed Fusion Enable FBK,,
+V5,1254,0.1,2,13,B2005,bit,261,1,Passenger Cruise Speed Fusion Enable FBK,,
+V5,1254,0.1,2,14,B2006,bit,262,1,Passenger GNSS Position Fusion Rejected,,
+V5,1254,0.1,2,15,B2007,bit,263,1,Passenger GNSS Velocity Fusion Rejected,,
+V5,1254,0.1,2,16,B2008,bit,264,1,Passenger Airspeed Fusion Rejected,,
+V5,1254,0.1,2,17,B2009,bit,265,1,Passenger Cruise Speed Fusion Rejected,,
+V5,1254,0.1,2,18,P28683,pos_abs,266,96,,,
+V6,1265,0.3030303,7000,0,R2020,real-float32,0,32,,,
+V6,1265,0.3030303,7000,1,U114,uinteger16,32,16,,,
+V6,1265,0.3030303,7000,2,R1500,real-float32,48,32,,,
+V6,1265,0.3030303,7000,3,R65,real-float32,80,32,,,
+V6,1265,0.3030303,7000,4,R0,real-float32,112,32,,,
+V6,1265,0.3030303,7000,5,R2,real-float32,144,32,,GS (Ground Speed),yes
+V6,1265,0.3030303,7000,6,R126,real-float32,176,32,,,
+V6,1265,0.3030303,7000,7,R127,real-float32,208,32,,,
+V6,1265,0.3030303,7000,8,R142,real-float32,240,32,,,
+V6,1265,0.3030303,7000,9,R300,real-float32,272,32,,,
+V6,1265,0.3030303,7000,10,R303,real-float32,304,32,,,
+V6,1265,0.3030303,7000,11,R304,real-float32,336,32,,,
+V6,1265,0.3030303,7000,12,R400,real-float32,368,32,,Power Input,yes
+V6,1265,0.3030303,7000,13,R405,real-float32,400,32,,CPU Temperature,yes
+V6,1265,0.3030303,7000,14,R500,real-float32,432,32,,Longitude,yes
+V6,1265,0.3030303,7000,15,R501,real-float32,464,32,,Latitude,yes
+V6,1265,0.3030303,7000,16,R502,real-float32,496,32,,,
+V6,1265,0.3030303,7000,17,R503,real-float32,528,32,,MSL (Height Above Mean Sea Level) - Altitude,yes
+V6,1265,0.3030303,7000,18,R504,real-float32,560,32,,AGL (Above Ground Level) – Height,yes
+V6,1265,0.3030303,7000,19,R1100,real-float32,592,32,,Lidar 0 Distance,yes
+V6,1265,0.3030303,7000,20,R1404,real-float32,624,32,,Barometric Pressure at Sea Level (QNH),yes
+V6,1265,0.3030303,7000,21,R1506,real-float32,656,32,,,
+V6,1265,0.3030303,7000,22,R1510,real-float32,688,32,,,
+V6,1265,0.3030303,7000,23,R1529,real-float32,720,32,,,
+V6,1265,0.3030303,7000,24,R1610,real-float32,752,32,,,
+V6,1265,0.3030303,7000,25,R1629,real-float32,784,32,,,
+V6,1265,0.3030303,7000,26,R2000,real-float32,816,32,,,
+V6,1265,0.3030303,7000,27,R2001,real-float32,848,32,,,
+V6,1265,0.3030303,7000,28,R2047,real-float32,880,32,,,
+V6,1265,0.3030303,7000,29,R2050,real-float32,912,32,,Acquisition Task Average CPU Ratio,yes
+V6,1265,0.3030303,7000,30,R2051,real-float32,944,32,,Acquisition Task Maximum CPU Ratio,yes
+V6,1265,0.3030303,7000,31,R2057,real-float32,976,32,,MC CIO Running Frequency,yes
+V6,1265,0.3030303,7000,32,R2094,real-float32,1008,32,,GNC Task Average CPU Ratio,yes
+V6,1265,0.3030303,7000,33,R2095,real-float32,1040,32,,GNC Task Maximum CPU Ratio,yes
+V6,1265,0.3030303,7000,34,R2812,real-float32,1072,32,,,
+V6,1265,0.3030303,7000,35,R2900,real-float32,1104,32,,,
+V6,1265,0.3030303,7000,36,R2903,real-float32,1136,32,,,
+V6,1265,0.3030303,7000,37,R3118,real-float32,1168,32,Control mix,,
+V6,1265,0.3030303,7000,38,R3130,real-float32,1200,32,IAS Filtered,IAS Filtered,yes
+V6,1265,0.3030303,7000,39,R3173,real-float32,1232,32,Knobs MSL cmd,Knobs MSL cmd,yes
+V6,1265,0.3030303,7000,40,R3174,real-float32,1264,32,Knobs IAS cmd,Knobs IAS cmd,yes
+V6,1265,0.3030303,7000,41,R3175,real-float32,1296,32,Control mix 2,,
+V6,1265,0.3030303,7000,42,R3176,real-float32,1328,32,Control mix 3,,
+V6,1265,0.3030303,7000,43,R3177,real-float32,1360,32,Knobs HDG cmd,Knobs HDG cmd,yes
+V6,1265,0.3030303,7000,44,R3180,real-float32,1392,32,UAV WEIGHT INPUT,UAV WEIGHT INPUT,yes
+V6,1265,0.3030303,7000,45,R3181,real-float32,1424,32,ROC,ROC,yes
+V6,1265,0.3030303,7000,46,R3182,real-float32,1456,32,UAV WEIGHT OUTPUT,UAV WEIGHT OUTPUT,yes
+V6,1265,0.3030303,7000,47,R3183,real-float32,1488,32,Fuel Quantity Input,Fuel Quantity Input,yes
+V6,1265,0.3030303,7000,48,R3185,real-float32,1520,32,Fuel Level Mass,Fuel Level Mass,yes
+V6,1265,0.3030303,7000,49,R3186,real-float32,1552,32,,,
+V6,1265,0.3030303,7000,50,R3187,real-float32,1584,32,AFL ALT CMD,AFL ALT CMD,yes
+V6,1265,0.3030303,7000,51,R3188,real-float32,1616,32,AGL - Height (ft),AGL - Height (ft),yes
+V6,1265,0.3030303,7000,52,R3193,real-float32,1648,32,THR,THR,yes
+V6,1265,0.3030303,7000,53,R3201,real-float32,1680,32,BATT A,BATT A,yes
+V6,1265,0.3030303,7000,54,R3205,real-float32,1712,32,AGL Rounded cmd,AGL Rounded cmd,yes
+V6,1265,0.3030303,7000,55,R3206,real-float32,1744,32,MSL rounded cmd,MSL rounded cmd,yes
+V6,1265,0.3030303,7000,56,R3207,real-float32,1776,32,Next Point Alt,,
+V6,1265,0.3030303,7000,57,R3208,real-float32,1808,32,Fuel Flow l/h,Fuel Flow l/h,yes
+V6,1265,0.3030303,7000,58,R3209,real-float32,1840,32,GNSS1 Accuracy For ops,GNSS1 Accuracy For ops,yes
+V6,1265,0.3030303,7000,59,R3210,real-float32,1872,32,GNSS2 Accuracy For ops,GNSS2 Accuracy For ops,yes
+V6,1265,0.3030303,7000,60,R3211,real-float32,1904,32,PMU RPM Corrected for OPS,,
+V6,1265,0.3030303,7000,61,R3214,real-float32,1936,32,Dynamic pressure after Offset Calibration,,
+V6,1265,0.3030303,7000,62,R3215,real-float32,1968,32,Fuel Remaining Calculated,Fuel Remaining Calculated,yes
+V6,1265,0.3030303,7000,63,R3222,real-float32,2000,32,SKYE2 Dyn Pressure,,
+V6,1265,0.3030303,7000,64,R3226,real-float32,2032,32,SKYE2 Pitot Temp,,
+V6,1265,0.3030303,7000,65,R3234,real-float32,2064,32,RH Delay timer,RH delay timer,yes
+V6,1265,0.3030303,7000,66,R3239,real-float32,2096,32,NIS ARRAY [0] GNSS1 POS,,
+V6,1265,0.3030303,7000,67,R3241,real-float32,2128,32,NIS ARRAY [2] GNSS2 POS,,
+V6,1265,0.3030303,7000,68,R3243,real-float32,2160,32,NIS ARRAY [4] MAG,,
+V6,1265,0.3030303,7000,69,R3244,real-float32,2192,32,NIS ARRAY [5] S PRES,,
+V6,1265,0.3030303,7000,70,R3245,real-float32,2224,32,NIS ARRAY [6] AGL,,
+V6,1265,0.3030303,7000,71,R3246,real-float32,2256,32,NIS ARRAY [7] LIDAR,,
+V6,1265,0.3030303,7000,72,R3249,real-float32,2288,32,Distance from Selected RH,,
+V6,1265,0.3030303,7000,73,R3251,real-float32,2320,32,ESC1 Voltage,ESC1 Voltage,yes
+V6,1265,0.3030303,7000,74,R3253,real-float32,2352,32,ESC1 Temperature,ESC1 Temperature,yes
+V6,1265,0.3030303,7000,75,R3254,real-float32,2384,32,ESC2 Voltage,ESC2 Voltage,yes
+V6,1265,0.3030303,7000,76,R3256,real-float32,2416,32,ESC2 Temperature,ESC2 Temperature,yes
+V6,1265,0.3030303,7000,77,R3257,real-float32,2448,32,ESC3 Voltage,ESC3 Voltage,yes
+V6,1265,0.3030303,7000,78,R3259,real-float32,2480,32,ESC3 Temperature,ESC3 Temperature,yes
+V6,1265,0.3030303,7000,79,R3262,real-float32,2512,32,Distance to PCS,Distance to PCS,yes
+V6,1265,0.3030303,7000,80,R3267,real-float32,2544,32,SRTM Valid,,
+V6,1265,0.3030303,7000,81,R3268,real-float32,2576,32,SRTM Height,SRTM Height,yes
+V6,1265,0.3030303,7000,82,R3300,real-float32,2608,32,L MTR,L MTR,yes
+V6,1265,0.3030303,7000,83,R3301,real-float32,2640,32,R MTR,R MTR,yes
+V6,1265,0.3030303,7000,84,R3302,real-float32,2672,32,T MTR,T MTR,yes
+V6,1265,0.3030303,7000,85,R3333,real-float32,2704,32,Passenger Distance to Flying AP,,
+V6,1265,0.3030303,7000,86,R3400,real-float32,2736,32,Fuel Level Sensor,Fuel Level Sensor,yes
+V6,1265,0.3030303,7000,87,R3401,real-float32,2768,32,Fuel Temperature,Fuel Temperature,yes
+V6,1265,0.3030303,7000,88,R3499,real-float32,2800,32,ECU RPM,ECU RPM -- rpm,yes
+V6,1265,0.3030303,7000,89,R3501,real-float32,2832,32,ECU TPS,,
+V6,1265,0.3030303,7000,90,R3502,real-float32,2864,32,CHT,CHT,yes
+V6,1265,0.3030303,7000,91,R3503,real-float32,2896,32,ECU MAT,ECU MAT,yes
+V6,1265,0.3030303,7000,92,R3505,real-float32,2928,32,ECU Baro,,
+V6,1265,0.3030303,7000,93,R3506,real-float32,2960,32,ECU Temp Digital,,
+V6,1265,0.3030303,7000,94,R3512,real-float32,2992,32,ECU Fuel Pressure,,
+V6,1265,0.3030303,7000,95,R3513,real-float32,3024,32,ECU Fuel Pump Duty Cycle,ECU Fuel Pump Duty Cycle,yes
+V6,1265,0.3030303,7000,96,R3516,real-float32,3056,32,ECU Input Voltage,ECU Input Voltage,yes
+V6,1265,0.3030303,7000,97,R3517,real-float32,3088,32,ECU 12V Rail Voltage,,
+V6,1265,0.3030303,7000,98,R3521,real-float32,3120,32,ECU Fuel Consumed in g,,
+V6,1265,0.3030303,7000,99,R3600,real-float32,3152,32,PMU RPM,PMU RPM,yes
+V6,1265,0.3030303,7000,100,R3601,real-float32,3184,32,PMU PWM Duty Cycle,PMU PWM Duty Cycle,yes
+V6,1265,0.3030303,7000,101,R3602,real-float32,3216,32,PMU Generator Voltage,PMU Generator Voltage,yes
+V6,1265,0.3030303,7000,102,R3603,real-float32,3248,32,PMU Main Voltage,PMU Main Voltage,yes
+V6,1265,0.3030303,7000,103,R3604,real-float32,3280,32,BATT V,BATT V,yes
+V6,1265,0.3030303,7000,104,R3607,real-float32,3312,32,PMU High Voltage Current,,yes
+V6,1265,0.3030303,7000,105,R3610,real-float32,3344,32,PMU Operational Mode,PMU Operational Mode,yes
+V6,1265,0.3030303,7000,106,R3620,real-float32,3376,32,PMU Generator Temperature,PMU Generator Temperature,yes
+V6,1265,0.3030303,7000,107,R3621,real-float32,3408,32,PMU Power Board Temperature,PMU Power Board Temperature,yes
+V6,1265,0.3030303,7000,108,R3622,real-float32,3440,32,PMU Switched Output Duty Cycle,,
+V6,1265,0.3030303,7000,109,R3625,real-float32,3472,32,PMU Regulator Temperature,PMU Regulator Temperature,yes
+V6,1265,0.3030303,7000,110,R4024,real-float32,3504,32,Servo Elevator R Temp FBK,Servo Elevator R Temp FBK,yes
+V6,1265,0.3030303,7000,111,R4025,real-float32,3536,32,Servo Elevator L Temp FBK,Servo Elevator L Temp FBK,yes
+V6,1265,0.3030303,7000,112,R4026,real-float32,3568,32,Servo Aileron R Temp FBK,Servo Aileron R Temp FBK,yes
+V6,1265,0.3030303,7000,113,R4027,real-float32,3600,32,Servo Aileron L Temp FBK,Servo Aileron L Temp FBK,yes
+V6,1265,0.3030303,7000,114,R4028,real-float32,3632,32,Servo Rudder Temp FBK,Servo Rudder Temp FBK,yes
+V6,1265,0.3030303,7000,115,R4029,real-float32,3664,32,Servo Tilt Temp FBK,Servo Tilt Temp FBK,yes
+V6,1265,0.3030303,7000,116,U1,uinteger16,3696,16,,,yes
+V6,1265,0.3030303,7000,117,U95,uinteger16,3712,16,,UAV hardware address,yes
+V6,1265,0.3030303,7000,118,U150,uinteger16,3728,16,,GNSS2 Number of Satellites Used in Solution,yes
+V6,1265,0.3030303,7000,119,U167,uinteger16,3744,16,,GNSS2 Fix Type,yes
+V6,1265,0.3030303,7000,120,U1040,uinteger16,3760,16,SW VERSION MAJOR,SW VERSION MAJOR,yes
+V6,1265,0.3030303,7000,121,U1041,uinteger16,3776,16,SW VERSION MINOR,SW VERSION MINOR,yes
+V6,1265,0.3030303,7000,122,U1042,uinteger16,3792,16,SW VERSION PATCH,SW VERSION PATCH,yes
+V6,1265,0.3030303,7000,123,U1043,uinteger16,3808,16,SW VERSION HASH,,
+V6,1265,0.3030303,7000,124,U1044,uinteger16,3824,16,SW VERSION DIRTY,SW VERSION DIRTY,yes
+V6,1265,0.3030303,7000,125,U1045,uinteger16,3840,16,SW VERSION CRC HIGH,SW VERSION CRC HIGH,yes
+V6,1265,0.3030303,7000,126,U1046,uinteger16,3856,16,SW VERSION CRC LOW,SW VERSION CRC LOW,yes
+V7,1265,0.05,7000,0,R3,real-float32,0,32,,Heading,yes
+V7,1265,0.05,7000,1,R4,real-float32,32,32,,,
+V7,1265,0.05,7000,2,R6,real-float32,64,32,,Yaw,yes
+V7,1265,0.05,7000,3,R7,real-float32,96,32,,Pitch,yes
+V7,1265,0.05,7000,4,R8,real-float32,128,32,,Roll,yes
+V7,1265,0.05,7000,5,R12,real-float32,160,32,,,
+V7,1265,0.05,7000,6,R13,real-float32,192,32,,,
+V7,1265,0.05,7000,7,R14,real-float32,224,32,,,
+V7,1265,0.05,7000,8,R19,real-float32,256,32,,,
+V7,1265,0.05,7000,9,R20,real-float32,288,32,,,
+V7,1265,0.05,7000,10,R100,real-float32,320,32,,Desired IAS (Indicated Airspeed),yes
+V7,1265,0.05,7000,11,R102,real-float32,352,32,,,
+V7,1265,0.05,7000,12,R103,real-float32,384,32,,,
+V7,1265,0.05,7000,13,R104,real-float32,416,32,,,
+V7,1265,0.05,7000,14,R106,real-float32,448,32,,,
+V7,1265,0.05,7000,15,R107,real-float32,480,32,,Desired Pitch,yes
+V7,1265,0.05,7000,16,R108,real-float32,512,32,,Desired Roll,yes
+V7,1265,0.05,7000,17,R112,real-float32,544,32,,,
+V7,1265,0.05,7000,18,R113,real-float32,576,32,,,
+V7,1265,0.05,7000,19,R119,real-float32,608,32,,,
+V7,1265,0.05,7000,20,R120,real-float32,640,32,,,
+V7,1265,0.05,7000,21,R202,real-float32,672,32,,,
+V7,1265,0.05,7000,22,R209,real-float32,704,32,,Desired MSL (Height Above Mean Sea Level) - Altitude,yes
+V7,1265,0.05,7000,23,R307,real-float32,736,32,,,
+V7,1265,0.05,7000,24,R308,real-float32,768,32,,,
+V7,1265,0.05,7000,25,R309,real-float32,800,32,,,
+V7,1265,0.05,7000,26,R310,real-float32,832,32,,,
+V7,1265,0.05,7000,27,R311,real-float32,864,32,,,
+V7,1265,0.05,7000,28,R312,real-float32,896,32,,,
+V7,1265,0.05,7000,29,R507,real-float32,928,32,,,
+V7,1265,0.05,7000,30,R1050,real-float32,960,32,Pitching (Q) Before Servo Saturation,,
+V7,1265,0.05,7000,31,R1051,real-float32,992,32,Thrusting (Q) Before Servo Saturation,,
+V7,1265,0.05,7000,32,R1052,real-float32,1024,32,Rolling (Q) Before Servo Saturation,,
+V7,1265,0.05,7000,33,R1053,real-float32,1056,32,Yawing (Q) Before Servo Saturation,,
+V7,1265,0.05,7000,34,R1054,real-float32,1088,32,Pitching (P) Before Servo Saturation,,
+V7,1265,0.05,7000,35,R1055,real-float32,1120,32,Thrusting (P) Before Servo Saturation,,
+V7,1265,0.05,7000,36,R1056,real-float32,1152,32,Rolling (P) Before Servo Saturation,,
+V7,1265,0.05,7000,37,R1057,real-float32,1184,32,Yawing (P) Before Servo Saturation,,
+V7,1265,0.05,7000,38,R1509,real-float32,1216,32,,GNSS1 PDOP,yes
+V7,1265,0.05,7000,39,R1513,real-float32,1248,32,,,
+V7,1265,0.05,7000,40,R1514,real-float32,1280,32,,,
+V7,1265,0.05,7000,41,R1515,real-float32,1312,32,,,
+V7,1265,0.05,7000,42,R1609,real-float32,1344,32,,GNSS2 PDOP,yes
+V7,1265,0.05,7000,43,R1704,real-float32,1376,32,Right Elevator,,
+V7,1265,0.05,7000,44,R1705,real-float32,1408,32,Left Elevator,,
+V7,1265,0.05,7000,45,R1706,real-float32,1440,32,Right Aileron,,
+V7,1265,0.05,7000,46,R1707,real-float32,1472,32,Left Aileron,,
+V7,1265,0.05,7000,47,R1708,real-float32,1504,32,Rudder,,
+V7,1265,0.05,7000,48,R2404,real-float32,1536,32,Pitching (P),,
+V7,1265,0.05,7000,49,R2405,real-float32,1568,32,Thrusting (P),,
+V7,1265,0.05,7000,50,R2406,real-float32,1600,32,Rolling (P),,
+V7,1265,0.05,7000,51,R2407,real-float32,1632,32,Yawing (P),,
+V7,1265,0.05,7000,52,R2813,real-float32,1664,32,,Wind Velocity in North-East plane (Deprecated),yes
+V7,1265,0.05,7000,53,R3104,real-float32,1696,32,Stick - Mode,Stick - Mode,yes
+V7,1265,0.05,7000,54,R3105,real-float32,1728,32,Stick - Transition,Stick - Transition,yes
+V7,1265,0.05,7000,55,R3106,real-float32,1760,32,Stick - Manual,Stick - Manual,yes
+V7,1265,0.05,7000,56,R3124,real-float32,1792,32,Arc - Pitch,,
+V7,1265,0.05,7000,57,R3125,real-float32,1824,32,Arc - Roll,,
+V7,1265,0.05,7000,58,R3126,real-float32,1856,32,Arc - Throttle,,
+V7,1265,0.05,7000,59,R3127,real-float32,1888,32,Arc - Yaw,,
+V7,1265,0.05,7000,60,R3189,real-float32,1920,32,Desired AGL (ft),Desired AGL (ft),yes
+V7,1265,0.05,7000,61,R3200,real-float32,1952,32,Engine Panel Throttle Input,Engine Panel Throttle Input,yes
+V7,1265,0.05,7000,62,R3240,real-float32,1984,32,NIS ARRAY [1] GNSS1 VEL,,
+V7,1265,0.05,7000,63,R3242,real-float32,2016,32,NIS ARRAY [3] GNSS2 VEL,,
+V7,1265,0.05,7000,64,R3252,real-float32,2048,32,ESC1 Current,ESC1 Current -- A,yes
+V7,1265,0.05,7000,65,R3255,real-float32,2080,32,ESC2 Current,ESC2 Current -- A,yes
+V7,1265,0.05,7000,66,R3258,real-float32,2112,32,ESC3 Current,ESC3 Current -- A,yes
+V7,1265,0.05,7000,67,R3264,real-float32,2144,32,Air Flight path angle,,
+V7,1265,0.05,7000,68,R3330,real-float32,2176,32,Passenger Yaw,,
+V7,1265,0.05,7000,69,R3331,real-float32,2208,32,Passenger Pitch,,
+V7,1265,0.05,7000,70,R3332,real-float32,2240,32,Passenger Roll,,
+V7,1265,0.05,7000,71,R3334,real-float32,2272,32,Passenger GNSS-Airspeed Velocity Delta,,
+V7,1265,0.05,7000,72,R3335,real-float32,2304,32,Passenger-Flying Yaw Delta,,
+V7,1265,0.05,7000,73,R3336,real-float32,2336,32,Passenger-Flying Pitch Delta,,
+V7,1265,0.05,7000,74,R3337,real-float32,2368,32,Passenger-Flying Roll Delta,,
+V7,1265,0.05,7000,75,R3500,real-float32,2400,32,ECU Throttle Cmd,ECU Throttle Cmd,yes
+V7,1265,0.05,7000,76,R3509,real-float32,2432,32,ECU Sticky Crank 1 Error,,
+V7,1265,0.05,7000,77,R3510,real-float32,2464,32,ECU Sticky Crank 2 error,,
+V7,1265,0.05,7000,78,R3514,real-float32,2496,32,ECU Throttle Output,,
+V7,1265,0.05,7000,79,R3518,real-float32,2528,32,ECU Input Current,ECU Input Current,yes
+V7,1265,0.05,7000,80,R3519,real-float32,2560,32,ECU 12V Rail Current,,
+V7,1265,0.05,7000,81,R3605,real-float32,2592,32,PMU Generator Current,PMU Generator Current,yes
+V7,1265,0.05,7000,82,R3611,real-float32,2624,32,PMU System Current,PMU System Current,yes
+V7,1265,0.05,7000,83,R3612,real-float32,2656,32,PMU Regulator Current,PMU Regulator Current,yes
+V7,1265,0.05,7000,84,R4018,real-float32,2688,32,Servo Elevator R Cur FBK,Servo Elevator R Cur FBK,yes
+V7,1265,0.05,7000,85,R4019,real-float32,2720,32,Servo Elevator L Cur FBK,Servo Elevator L Cur FBK,yes
+V7,1265,0.05,7000,86,R4020,real-float32,2752,32,Servo Aileron R Cur FBK,Servo Aileron R Cur FBK,yes
+V7,1265,0.05,7000,87,R4021,real-float32,2784,32,Servo Aileron L Cur FBK,Servo Aileron L Cur FBK,yes
+V7,1265,0.05,7000,88,R4022,real-float32,2816,32,Servo Rudder Cur FBK,Servo Rudder Cur FBK,yes
+V7,1265,0.05,7000,89,R4023,real-float32,2848,32,Servo Tilt Cur FBK,Servo Tilt Cur FBK,yes
+V7,1265,0.05,7000,90,U80,uinteger16,2880,16,,,
+V7,1265,0.05,7000,91,U117,uinteger16,2896,16,,GNSS1 Fix Type,yes
+V7,1265,0.05,7000,92,U201,uinteger16,2912,16,,,
+V7,1265,0.05,7000,93,U203,uinteger16,2928,16,,,
+V7,1265,0.05,7000,94,U204,uinteger16,2944,16,,,
+V7,1265,0.05,7000,95,U1002,uinteger16,2960,16,IAS CMD Mode,,
+V7,1265,0.05,7000,96,U1003,uinteger16,2976,16,LIDAR STATE,,
+V7,1265,0.05,7000,97,U1004,uinteger16,2992,16,LIDAR AUTO MODE,,
+V7,1265,0.05,7000,98,U1005,uinteger16,3008,16,Engine State,Engine State,yes
+V7,1265,0.05,7000,99,U1006,uinteger16,3024,16,ESC1 Speed,,
+V7,1265,0.05,7000,100,U1007,uinteger16,3040,16,ESC2 Speed,,
+V7,1265,0.05,7000,101,U1008,uinteger16,3056,16,ESC3 Speed,,
+V7,1265,0.05,7000,102,U1025,uinteger16,3072,16,ESC1 CMD,,
+V7,1265,0.05,7000,103,U1026,uinteger16,3088,16,ESC2 CMD,,
+V7,1265,0.05,7000,104,B9,bit,3104,1,,PDI Error,yes
+V7,1265,0.05,7000,105,B50,bit,3105,1,,Sensors Error,yes
+V7,1265,0.05,7000,106,B57,bit,3106,1,,Sensor-Static pressure 1,yes
+V7,1265,0.05,7000,107,B58,bit,3107,1,,Sensor-Dynamic pressure,yes
+V7,1265,0.05,7000,108,B60,bit,3108,1,,,
+V7,1265,0.05,7000,109,B73,bit,3109,1,,CAN-A Error,yes
+V7,1265,0.05,7000,110,B74,bit,3110,1,,CAN-B Error,yes
+V7,1265,0.05,7000,111,B83,bit,3111,1,,IMU 2 Error,yes
+V7,1265,0.05,7000,112,B90,bit,3112,1,,IMU 3 Error,yes
+V7,1265,0.05,7000,113,B101,bit,3113,1,,No valid SRTM at UAV position ,yes
+V7,1265,0.05,7000,114,B105,bit,3114,1,,,
+V7,1265,0.05,7000,115,B110,bit,3115,1,,Stick Not Detected ,yes
+V7,1265,0.05,7000,116,B133,bit,3116,1,,Operation Error,yes
+V7,1265,0.05,7000,117,B134,bit,3117,1,,Atmosphere not calibrated ,yes
+V7,1265,0.05,7000,118,B401,bit,3118,1,,GNC Fail,yes
+V7,1265,0.05,7000,119,B403,bit,3119,1,,,
+V7,1265,0.05,7000,120,B801,bit,3120,1,,,
+V7,1265,0.05,7000,121,B803,bit,3121,1,,,
+V7,1265,0.05,7000,122,B805,bit,3122,1,,,
+V7,1265,0.05,7000,123,B807,bit,3123,1,,,
+V7,1265,0.05,7000,124,B808,bit,3124,1,,,
+V7,1265,0.05,7000,125,B1030,bit,3125,1,SKYE2 Raw Air Data,SKYE2 Raw Air Data,yes
+V7,1265,0.05,7000,126,B1060,bit,3126,1,ECU Fast Telemetry Message Received,ECU Fast Telemetry Message Received,yes
+V7,1265,0.05,7000,127,B1063,bit,3127,1,ECU Sticky Errors Message Received,,
+V7,1265,0.05,7000,128,B1070,bit,3128,1,PMU Fast Telemetry 1 Message Received,PMU Fast Telemetry 1 Message Received,yes
+V7,1265,0.05,7000,129,B1077,bit,3129,1,ESC1 Status Msg received,Custom msg 67 Rx Error,yes
+V7,1265,0.05,7000,130,B1078,bit,3130,1,ESC2 Status Msg received,Custom msg 68 Rx Error,yes
+V7,1265,0.05,7000,131,B1079,bit,3131,1,ESC3 Status Msg received,Custom msg 69 Rx Error,yes
+V7,1265,0.05,7000,132,B1188,bit,3132,1,,External magnetometer 0 Error,yes
+V7,1265,0.05,7000,133,B1210,bit,3133,1,Multicopter RTH,,
+V7,1265,0.05,7000,134,B1211,bit,3134,1,Knobs MSL mode,,
+V7,1265,0.05,7000,135,B1212,bit,3135,1,Flying FW,Flying FW,yes
+V7,1265,0.05,7000,136,B1213,bit,3136,1,Flying multi,Flying multi,yes
+V7,1265,0.05,7000,137,B1214,bit,3137,1,Flying transition,Flying transition,yes
+V7,1265,0.05,7000,138,B1217,bit,3138,1,IAS MANUAL CHANGE UP CMD,,
+V7,1265,0.05,7000,139,B1218,bit,3139,1,IAS MANUAL CHANGE DOWN CMD,,
+V7,1265,0.05,7000,140,B1221,bit,3140,1,Imbalance Pitch (Q),,
+V7,1265,0.05,7000,141,B1222,bit,3141,1,Imbalance Roll (Q),,
+V7,1265,0.05,7000,142,B1223,bit,3142,1,Imbalance Yaw (Q),,
+V7,1265,0.05,7000,143,B1224,bit,3143,1,Imbalance Pitch (P),,
+V7,1265,0.05,7000,144,B1225,bit,3144,1,Imbalance Roll (P),,
+V7,1265,0.05,7000,145,B1226,bit,3145,1,Simulation Enable,,yes
+V7,1265,0.05,7000,146,B1230,bit,3146,1,Link Status,,
+V7,1265,0.05,7000,147,B1231,bit,3147,1,Imbalance Yaw (P),,
+V7,1265,0.05,7000,148,B1232,bit,3148,1,KNOBS MOTORS ARM CMD,KNOBS MOTORS ARM CMD,yes
+V7,1265,0.05,7000,149,B1233,bit,3149,1,KNOBS ENGINE CUT CMD,KNOBS ENGINE CUT CMD,yes
+V7,1265,0.05,7000,150,B1234,bit,3150,1,KNOBS HOLD CMD,KNOBS HOLD CMD,yes
+V7,1265,0.05,7000,151,B1235,bit,3151,1,KNOBS RETURN CMD,KNOBS RETURN CMD,yes
+V7,1265,0.05,7000,152,B1240,bit,3152,1,Tech mode,,
+V7,1265,0.05,7000,153,B1241,bit,3153,1,Wing enable sim CMD,Wing enable sim CMD,yes
+V7,1265,0.05,7000,154,B1243,bit,3154,1,Wing disarm switch,Wing disarm switch,yes
+V7,1265,0.05,7000,155,B1245,bit,3155,1,Force HDG Phase,Force HDG Phase ,yes
+V7,1265,0.05,7000,156,B1246,bit,3156,1,Position not fixed Result,Position not fixed Result ,yes
+V7,1265,0.05,7000,157,B1247,bit,3157,1,Motors arm Software Enable,,
+V7,1265,0.05,7000,158,B1248,bit,3158,1,Test Flight,Test Flight,yes
+V7,1265,0.05,7000,159,B1249,bit,3159,1,One time message request,,
+V7,1265,0.05,7000,160,B1250,bit,3160,1,AFL MODE CMD,,yes
+V7,1265,0.05,7000,161,B1253,bit,3161,1,Manual ALT CMD state,,
+V7,1265,0.05,7000,162,B1254,bit,3162,1,Enable passenger telemetry,Enable passenger telemetry,yes
+V7,1265,0.05,7000,163,B1255,bit,3163,1,Enable energy control,Enable energy control ,yes
+V7,1265,0.05,7000,164,B1256,bit,3164,1,Hold CW Operator CMD,User BIT 56 ERROR,yes
+V7,1265,0.05,7000,165,B1260,bit,3165,1,SRTM selected for AGL,,
+V7,1265,0.05,7000,166,B1261,bit,3166,1,Lidar selected for AGL,,
+V7,1265,0.05,7000,167,B1266,bit,3167,1,Stick detected since power up,,yes
+V7,1265,0.05,7000,168,B1267,bit,3168,1,ESC1 Status Msg,,
+V7,1265,0.05,7000,169,B1268,bit,3169,1,ESC2 Status Msg,,
+V7,1265,0.05,7000,170,B1269,bit,3170,1,ESC3 Status Msg,,
+V7,1265,0.05,7000,171,B1274,bit,3171,1,Speed calibration cmd,,
+V7,1265,0.05,7000,172,B1275,bit,3172,1,IAS offset calibration done,User BIT 75 Error,yes
+V7,1265,0.05,7000,173,B1276,bit,3173,1,GNSS1 Degraded,User BIT 76 Error,yes
+V7,1265,0.05,7000,174,B1277,bit,3174,1,GNSS2 Degraded,User BIT 77 Error,yes
+V7,1265,0.05,7000,175,B1278,bit,3175,1,Knobs box disconnected,Knobs box disconnected ,yes
+V7,1265,0.05,7000,176,B1284,bit,3176,1,ESC1 Temp high,ESC1 Temp high ,yes
+V7,1265,0.05,7000,177,B1285,bit,3177,1,FBX allow switch to Sticks/Manual modes,FBX allow switch to Sticks/Manual modes ,yes
+V7,1265,0.05,7000,178,B1293,bit,3178,1,ESC2 Temp high,ESC2 Temp high ,yes
+V7,1265,0.05,7000,179,B1294,bit,3179,1,ESC3 Temp high,ESC3 Temp high ,yes
+V7,1265,0.05,7000,180,B1295,bit,3180,1,ESC1 Current high,ESC1 Current high ,yes
+V7,1265,0.05,7000,181,B1296,bit,3181,1,ESC2 Current high,ESC2 Current high ,yes
+V7,1265,0.05,7000,182,B1297,bit,3182,1,ESC3 Current high,ESC3 Current high ,yes
+V7,1265,0.05,7000,183,B1299,bit,3183,1,Test flight Low Altitude landing,,
+V7,1265,0.05,7000,184,B1300,bit,3184,1,Engine Panel Throttle Control,,yes
+V7,1265,0.05,7000,185,B1301,bit,3185,1,FBX Secondary Enabled,FBX Secondary Enabled,yes
+V7,1265,0.05,7000,186,B1305,bit,3186,1,GNSS1 RTK No Fix,GNSS1 RTK No Fix,yes
+V7,1265,0.05,7000,187,B1306,bit,3187,1,INS Sensors degraded,User BIT 106 ERROR ,yes
+V7,1265,0.05,7000,188,B1307,bit,3188,1,Fuel Level Low,Fuel Level Low,yes
+V7,1265,0.05,7000,189,B1308,bit,3189,1,Fuel Level Critical,Fuel Level Critical,yes
+V7,1265,0.05,7000,190,B1309,bit,3190,1,Fuel Temperature High,Fuel Temperature High,yes
+V7,1265,0.05,7000,191,B1310,bit,3191,1,Primary Link Status,Primary Link Status,yes
+V7,1265,0.05,7000,192,B1311,bit,3192,1,Secondary Link Status,Secondary Link Status,yes
+V7,1265,0.05,7000,193,B1312,bit,3193,1,Primary Link ON,Primary Link ON,yes
+V7,1265,0.05,7000,194,B1313,bit,3194,1,Secondary Link ON,Secondary Link ON,yes
+V7,1265,0.05,7000,195,B1314,bit,3195,1,Secondary link ON User Override,Secondary link ON User Override  ,yes
+V7,1265,0.05,7000,196,B1315,bit,3196,1,Pitch Exceeds Limits,Pitch Exceeds Limits,yes
+V7,1265,0.05,7000,197,B1316,bit,3197,1,Roll Exceeds Limits,Roll Exceeds Limits,yes
+V7,1265,0.05,7000,198,B1317,bit,3198,1,Battery Over Current Major,Battery High Current,yes
+V7,1265,0.05,7000,199,B1318,bit,3199,1,Battery Over Current Minor,Battery High Current,yes
+V7,1265,0.05,7000,200,B1319,bit,3200,1,Low Speed Exceeded Minor,Low Speed Exceeded Minor,yes
+V7,1265,0.05,7000,201,B1320,bit,3201,1,Low Speed Exceeded Major,Low Speed Exceeded Major,yes
+V7,1265,0.05,7000,202,B1321,bit,3202,1,High Speed Exceeded Minor,High Speed Exceeded Minor,yes
+V7,1265,0.05,7000,203,B1322,bit,3203,1,High Speed Exceeded Major,High Speed Exceeded Major,yes
+V7,1265,0.05,7000,204,B1323,bit,3204,1,Battery Under Voltage Major,Battery Low Voltage,yes
+V7,1265,0.05,7000,205,B1324,bit,3205,1,Battery Under Voltage Minor,Battery Low Voltage,yes
+V7,1265,0.05,7000,206,B1325,bit,3206,1,Battery Over Voltage Major,Battery High Voltage,yes
+V7,1265,0.05,7000,207,B1355,bit,3207,1,Engine CUT,Engine CUT  ,yes
+V7,1265,0.05,7000,208,B1501,bit,3208,1,ECU User Enable,,yes
+V7,1265,0.05,7000,209,B1549,bit,3209,1,ECU Sticky Input Voltage Low,ECU Sticky Input Voltage Low ,yes
+V7,1265,0.05,7000,210,B1550,bit,3210,1,ECU Sticky Input Voltage High,ECU Sticky Input Voltage High ,yes
+V7,1265,0.05,7000,211,B1551,bit,3211,1,ECU Sticky Generator Commutation Error,ECU Sticky Generator Commutation Error,yes
+V7,1265,0.05,7000,212,B1552,bit,3212,1,ECU Sticky MAT Sensor Out of Range,ECU Sticky MAT Sensor Out of Range,yes
+V7,1265,0.05,7000,213,B1553,bit,3213,1,ECU Sticky Generator Overcurrent,,
+V7,1265,0.05,7000,214,B1554,bit,3214,1,ECU Sticky CHT1 Sensor Out of Range,ECU Sticky CHT1 Sensor Out of Range,yes
+V7,1265,0.05,7000,215,B1555,bit,3215,1,ECU Sticky Generator Overvoltage,ECU Sticky Generator Overvoltage,yes
+V7,1265,0.05,7000,216,B1556,bit,3216,1,ECU Sticky CHT2 Sensor Out of Range,,
+V7,1265,0.05,7000,217,B1557,bit,3217,1,ECU Sticky Generator Commutator Overtemperature,ECU Sticky Generator Commutator Overtemperature,yes
+V7,1265,0.05,7000,218,B1558,bit,3218,1,ECU Sticky MAP Sensor Out of Range,ECU Sticky MAP Sensor Out of Range,yes
+V7,1265,0.05,7000,219,B1559,bit,3219,1,ECU Sticky Generator Overtemperature,,
+V7,1265,0.05,7000,220,B1560,bit,3220,1,ECU Sticky Fuel Pressure Out of Range,ECU Sticky Fuel Pressure Out of Range,yes
+V7,1265,0.05,7000,221,B1561,bit,3221,1,ECU Sticky Engine/Generator RPM mismatch,ECU Sticky Engine/Generator RPM mismatch,yes
+V7,1265,0.05,7000,222,B1562,bit,3222,1,ECU Sticky Analog TPS Out of Range,ECU Sticky Analog TPS Out of Range,yes
+V7,1265,0.05,7000,223,B1563,bit,3223,1,ECU Sticky CPU Undertemperature,ECU Sticky CPU Undertemperature,yes
+V7,1265,0.05,7000,224,B1564,bit,3224,1,ECU Sticky CPU Overtemperature,ECU Sticky CPU Overtemperature,yes
+V7,1265,0.05,7000,225,B1565,bit,3225,1,ECU Sticky Digital Baro Temp Out of Range,ECU Sticky Digital Baro Temp Out of Range,yes
+V7,1265,0.05,7000,226,B1566,bit,3226,1,ECU Sticky Digital Baro Pressure Out of Range,ECU Sticky Digital Baro Pressure Out of Range,yes
+V7,1265,0.05,7000,227,B1567,bit,3227,1,ECU Sticky CHT1 Undertemperature,ECU Sticky CHT1 Undertemperature,yes
+V7,1265,0.05,7000,228,B1568,bit,3228,1,ECU Sticky CHT1 Overtemperature,ECU Sticky CHT1 Overtemperature,yes
+V7,1265,0.05,7000,229,B1569,bit,3229,1,ECU Sticky Fuel Pressure Low,ECU Sticky Fuel Pressure Low,yes
+V7,1265,0.05,7000,230,B1570,bit,3230,1,ECU Sticky Fuel Pressure High,ECU Sticky Fuel Pressure High ,yes
+V7,1265,0.05,7000,231,B1571,bit,3231,1,ECU Sticky Engine Hard RPM Over,ECU Sticky Engine Hard RPM Over,yes
+V7,1265,0.05,7000,232,B1572,bit,3232,1,ECU Sticky Engine Soft RPM Over,ECU Sticky Engine Soft RPM Over,yes
+V7,1265,0.05,7000,233,B1573,bit,3233,1,ECU Sticky Param Hash Error,ECU Sticky Param Hash Error ,yes
+V7,1265,0.05,7000,234,B1574,bit,3234,1,ECU Sticky 12V Rail Undervoltage,ECU Sticky 12V Rail Undervoltage,yes
+V7,1265,0.05,7000,235,B1575,bit,3235,1,ECU Sticky 12V Rail Overvoltage,ECU Sticky 12V Rail Overvoltage ,yes
+V7,1265,0.05,7000,236,B1576,bit,3236,1,ECU Sticky Input Overcurrent,ECU Sticky Input Overcurrent ,yes
+V7,1265,0.05,7000,237,B1577,bit,3237,1,ECU Sticky Factory Storeage Error,ECU Sticky Factory Storeage Error ,yes
+V7,1265,0.05,7000,238,B1578,bit,3238,1,ECU Sticky 12V Rail Overcurrent,ECU Sticky 12V Rail Overcurrent ,yes
+V7,1265,0.05,7000,239,B1579,bit,3239,1,ECU Sticky 6V Supply Fail,ECU Sticky 6V Supply Fail,yes
+V7,1265,0.05,7000,240,B1580,bit,3240,1,ECU Sticky Injector 1 Fault,ECU Sticky Injector 1 Fault ,yes
+V7,1265,0.05,7000,241,B1581,bit,3241,1,ECU Sticky Injector 2 Fault,,
+V7,1265,0.05,7000,242,B1582,bit,3242,1,ECU Sticky User Storage Error,ECU Sticky User Storage Error,yes
+V7,1265,0.05,7000,243,B1583,bit,3243,1,ECU Sticky Analog Baro Pressure Out of Range,ECU Sticky Analog Baro Pressure Out of Range ,yes
+V7,1265,0.05,7000,244,B1584,bit,3244,1,ECU Sticky CAN Thottle Missing,ECU Sticky CAN Thottle Missing,yes
+V7,1265,0.05,7000,245,B1585,bit,3245,1,ECU Sticky CAN Throttle Error,ECU Sticky CAN Throttle Error,yes
+V7,1265,0.05,7000,246,B1586,bit,3246,1,ECU Sticky Disabled by Throttle,ECU Sticky Disabled by Throttle,yes
+V7,1265,0.05,7000,247,B1587,bit,3247,1,ECU Sticky MAP Low,ECU Sticky MAP Low ,yes
+V7,1265,0.05,7000,248,B1588,bit,3248,1,ECU Sticky MAP High,ECU Sticky MAP High ,yes
+V7,1265,0.05,7000,249,B1589,bit,3249,1,ECU Sticky TPS Missing,ECU Sticky TPS Missing ,yes
+V7,1265,0.05,7000,250,B1590,bit,3250,1,ECU Sticky TPS Error,ECU Sticky TPS Error ,yes
+V7,1265,0.05,7000,251,B1591,bit,3251,1,ECU Sticky SD Card Error,ECU Sticky SD Card Error ,yes
+V7,1265,0.05,7000,252,B1592,bit,3252,1,ECU Sticky CAN Generator Missing,ECU Sticky CAN Generator Missing,yes
+V7,1265,0.05,7000,253,B1593,bit,3253,1,ECU Sticky Maintenance Needed,ECU Sticky Maintenance Needed,yes
+V7,1265,0.05,7000,254,B1594,bit,3254,1,ECU Sticky Test Mode Active,ECU Sticky Test Mode Active ,yes
+V7,1265,0.05,7000,255,B1602,bit,3255,1,ECU Self Crank Active,,
+V7,1265,0.05,7000,256,B1604,bit,3256,1,ECU OUT User Enable,,
+V7,1265,0.05,7000,257,B1718,bit,3257,1,PMU Regulator Enable Status,,
+V7,1265,0.05,7000,258,B1754,bit,3258,1,PMU Sticky Wear Data to Save,PMU Sticky Wear Data to Save,yes
+V7,1265,0.05,7000,259,B1755,bit,3259,1,PMU Sticky Main Regulator Fault,PMU Sticky Main Regulator Fault ,yes
+V7,1265,0.05,7000,260,B1756,bit,3260,1,PMU Sticky Rectifier Fault,PMU Sticky Rectifier Fault ,yes
+V7,1265,0.05,7000,261,B1757,bit,3261,1,PMU Sticky Regulator Low Voltage A Fault,PMU Sticky Regulator Low Voltage A Fault ,yes
+V7,1265,0.05,7000,262,B1758,bit,3262,1,PMU Sticky Regulator Low Voltage B Fault,PMU Sticky Regulator Low Voltage B Fault ,yes
+V7,1265,0.05,7000,263,B1759,bit,3263,1,PMU Sticky Generator Temperature Sensor Out of Range,PMU Sticky Generator Temperature Sensor Out of Range ,yes
+V7,1265,0.05,7000,264,B1760,bit,3264,1,PMU Sticky Generator Hot,PMU Sticky Generator Hot ,yes
+V7,1265,0.05,7000,265,B1761,bit,3265,1,PMU Sticky CPU Hot,PMU Sticky CPU Hot,yes
+V7,1265,0.05,7000,266,B1762,bit,3266,1,PMU Sticky Regulator Hot,PMU Sticky Regulator Hot ,yes
+V7,1265,0.05,7000,267,B1763,bit,3267,1,PMU Sticky Rectifier Hot,PMU Sticky Rectifier Hot ,yes
+V7,1265,0.05,7000,268,B1764,bit,3268,1,PMU Sticky Backup Battery Voltage Low,,
+V7,1265,0.05,7000,269,B1765,bit,3269,1,PMU Sticky Backup Battery Voltage High,,
+V7,1265,0.05,7000,270,B1766,bit,3270,1,PMU Sticky High Voltage Value Low,PMU Sticky High Voltage Value Low ,yes
+V7,1265,0.05,7000,271,B1767,bit,3271,1,PMU Sticky High Voltage Value High,PMU Sticky High Voltage Value High ,yes
+V7,1265,0.05,7000,272,B1768,bit,3272,1,PMU Sticky Generator Voltage Low,PMU Sticky Generator Voltage Low ,yes
+V7,1265,0.05,7000,273,B1769,bit,3273,1,PMU Sticky Generator Voltage High,PMU Sticky Generator Voltage High ,yes
+V7,1265,0.05,7000,274,B1770,bit,3274,1,PMU Sticky Generator Current High,PMU Sticky Generator Current High ,yes
+V7,1265,0.05,7000,275,B1771,bit,3275,1,PMU Sticky High Voltage Battery Hot,,
+V7,1265,0.05,7000,276,B1772,bit,3276,1,PMU Sticky High Voltage Battery Current High,PMU Sticky High Voltage Battery Current High ,yes
+V7,1265,0.05,7000,277,B1773,bit,3277,1,PMU Sticky Regulator Current High,PMU Sticky Regulator Current High ,yes
+V7,1265,0.05,7000,278,B1774,bit,3278,1,PMU Sticky Direction Wrong,PMU Sticky Direction Wrong,yes
+V7,1265,0.05,7000,279,B1775,bit,3279,1,PMU Sticky Hall U Error,,
+V7,1265,0.05,7000,280,B1776,bit,3280,1,PMU Sticky Hall V Error,,
+V7,1265,0.05,7000,281,B1777,bit,3281,1,PMU Sticky Hall W Error,,
+V7,1265,0.05,7000,282,B1778,bit,3282,1,PMU Sticky Hall Pattern Error,,
+V7,1265,0.05,7000,283,B1779,bit,3283,1,PMU Sticky Sensorless Pattern Error,PMU Sticky Sensorless Pattern Error,yes
+V7,1265,0.05,7000,284,B1780,bit,3284,1,PMU Sticky Sensorless Mismatch,PMU Sticky Sensorless Mismatch,yes
+V7,1265,0.05,7000,285,B1781,bit,3285,1,PMU Sticky RPM High,PMU Sticky RPM High ,yes
+V7,1265,0.05,7000,286,B1782,bit,3286,1,PMU Sticky Parameter Mismatch,PMU Sticky Parameter Mismatch ,yes
+V7,1265,0.05,7000,287,B1783,bit,3287,1,PMU Sticky Storage Error,PMU Sticky Storage Error ,yes
+V7,1265,0.05,7000,288,B1784,bit,3288,1,PMU Sticky Data to Save,PMU Sticky Data to Save,yes
+V7,1265,0.05,7000,289,B1785,bit,3289,1,PMU Sticky Test Mode Active,PMU Sticky Test Mode Active ,yes
+V7,1265,0.05,7000,290,B1793,bit,3290,1,FPA filter on,,
+V7,1265,0.05,7000,291,B2002,bit,3291,1,Passenger Cruise Speed Fusion Enable,,
+V7,1265,0.05,7000,292,B2003,bit,3292,1,Passenger GNSS Fusion Enable FBK,,
+V7,1265,0.05,7000,293,B2004,bit,3293,1,Passenger Airspeed Fusion Enable FBK,,
+V7,1265,0.05,7000,294,B2005,bit,3294,1,Passenger Cruise Speed Fusion Enable FBK,,
+V7,1265,0.05,7000,295,B2006,bit,3295,1,Passenger GNSS Position Fusion Rejected,,
+V7,1265,0.05,7000,296,B2007,bit,3296,1,Passenger GNSS Velocity Fusion Rejected,,
+V7,1265,0.05,7000,297,B2008,bit,3297,1,Passenger Airspeed Fusion Rejected,,
+V7,1265,0.05,7000,298,B2009,bit,3298,1,Passenger Cruise Speed Fusion Rejected,,
+V7,1265,0.05,7000,299,B2052,bit,3299,1,ESC3 ENCODER ERROR,ESC3 ENCODER ERROR,yes
+V7,1265,0.05,7000,300,B2053,bit,3300,1,ESC1 LOW BRIDGE FAULT,ESC1 LOW BRIDGE FAULT,yes
+V7,1265,0.05,7000,301,B2054,bit,3301,1,ESC2 LOW BRIDGE FAULT,ESC2 LOW BRIDGE FAULT,yes
+V7,1265,0.05,7000,302,B2055,bit,3302,1,ESC3 LOW BRIDGE FAULT,ESC3 LOW BRIDGE FAULT,yes
+V7,1265,0.05,7000,303,B2056,bit,3303,1,ESC1 UP BRIDGE FAULT,ESC1 UP BRIDGE FAULT,yes
+V7,1265,0.05,7000,304,B2058,bit,3304,1,ESC3 UP BRIDGE FAULT,ESC3 UP BRIDGE FAULT,yes
+V7,1265,0.05,7000,305,B2059,bit,3305,1,ESC1 OPERATIONAL AMPLIFIER FAULT,ESC1 OPERATIONAL AMPLIFIER FAULT,yes
+V7,1265,0.05,7000,306,B2060,bit,3306,1,ESC2 OPERATIONAL AMPLIFIER FAULT,ESC2 OPERATIONAL AMPLIFIER FAULT,yes
+V7,1265,0.05,7000,307,B2061,bit,3307,1,ESC3 OPERATIONAL AMPLIFIER FAULT,ESC3 OPERATIONAL AMPLIFIER FAULT,yes
+V7,1265,0.05,7000,308,B2062,bit,3308,1,ESC1 STALL,ESC1 STALL,yes
+V7,1265,0.05,7000,309,B2063,bit,3309,1,ESC2 STALL,ESC2 STALL,yes
+V7,1265,0.05,7000,310,B2064,bit,3310,1,ESC3 STALL,ESC3 STALL,yes
+V7,1265,0.05,7000,311,B2065,bit,3311,1,ESC1 CAPACITOR HOT,ESC1 CAPACITOR HOT,yes
+V7,1265,0.05,7000,312,B2066,bit,3312,1,ESC2 CAPACITOR HOT,ESC2 CAPACITOR HOT,yes
+V7,1265,0.05,7000,313,B2067,bit,3313,1,ESC3 CAPACITOR HOT,ESC3 CAPACITOR HOT,yes
+V7,1265,0.05,7000,314,B2068,bit,3314,1,ESC1 MOSFET HOT,ESC1 MOSFET HOT,yes
+V7,1265,0.05,7000,315,B2069,bit,3315,1,ESC2 MOSFET HOT,ESC2 MOSFET HOT,yes
+V7,1265,0.05,7000,316,B2070,bit,3316,1,ESC3 MOSFET HOT,ESC3 MOSFET HOT,yes
+V7,1265,0.05,7000,317,B2071,bit,3317,1,ESC1 THROTTLE ABNORMAL,ESC1 THROTTLE ABNORMAL,yes
+V7,1265,0.05,7000,318,B2072,bit,3318,1,ESC2 THROTTLE ABNORMAL,ESC2 THROTTLE ABNORMAL,yes
+V7,1265,0.05,7000,319,B2073,bit,3319,1,ESC3 THROTTLE ABNORMAL,ESC3 THROTTLE ABNORMAL,yes
+V7,1265,0.05,7000,320,B2074,bit,3320,1,ESC1 THROTTLE LOSS,ESC1 THROTTLE LOSS,yes
+V7,1265,0.05,7000,321,B2075,bit,3321,1,ESC2 THROTTLE LOSS,ESC2 THROTTLE LOSS,yes
+V7,1265,0.05,7000,322,B2076,bit,3322,1,ESC3 THROTTLE LOSS,ESC3 THROTTLE LOSS,yes
+V7,1265,0.05,7000,323,B2077,bit,3323,1,ESC1 OVERCURRENT,ESC1 OVERCURRENT,yes
+V7,1265,0.05,7000,324,B2078,bit,3324,1,ESC2 OVERCURRENT,ESC2 OVERCURRENT,yes
+V7,1265,0.05,7000,325,B2079,bit,3325,1,ESC3 OVERCURRENT,ESC3 OVERCURRENT,yes
+V7,1265,0.05,7000,326,B2080,bit,3326,1,ESC1 UNDERVOLTAGE,ESC1 UNDERVOLTAGE,yes
+V7,1265,0.05,7000,327,B2081,bit,3327,1,ESC2 UNDERVOLTAGE,ESC2 UNDERVOLTAGE,yes
+V7,1265,0.05,7000,328,B2082,bit,3328,1,ESC3 UNDERVOLTAGE,ESC3 UNDERVOLTAGE,yes
+V7,1265,0.05,7000,329,B2083,bit,3329,1,ESC1 OVERVOLTAGE,ESC1 OVERVOLTAGE,yes
+V7,1265,0.05,7000,330,B2084,bit,3330,1,ESC2 OVERVOLTAGE,ESC2 OVERVOLTAGE,yes
+V7,1265,0.05,7000,331,B2085,bit,3331,1,ESC3 OVERVOLTAGE,ESC3 OVERVOLTAGE,yes
+V7,1265,0.05,7000,332,B2195,bit,3332,1,Fuel Quantity State,,
+V7,1265,0.05,7000,333,B2198,bit,3333,1,STROBE LIGHT STATE,,yes

@@ -1,0 +1,94 @@
+{
+  "widgets": 503,
+  "readouts": 214,
+  "writes": 22,
+  "buttons": 24,
+  "alerts": 173,
+  "scripts": 3,
+  "visibility_conditions": 90,
+  "distinct_ap_vars": 138,
+  "not_in_telemetry": [],
+  "conditional_only": [
+    "B1254",
+    "B1300",
+    "R4018",
+    "R4019",
+    "R4020",
+    "R4021",
+    "R4022",
+    "R4023",
+    "U1040",
+    "U1041",
+    "U1042",
+    "U1044",
+    "U1045",
+    "U1046",
+    "U95"
+  ],
+  "vectors": [
+    {
+      "vector": "V0",
+      "enable": 1,
+      "period_s": 0.1,
+      "dst": 2,
+      "packed_bits": 976,
+      "fields": 19
+    },
+    {
+      "vector": "V1",
+      "enable": 1,
+      "period_s": 0.16666667,
+      "dst": 2,
+      "packed_bits": 3330,
+      "fields": 329
+    },
+    {
+      "vector": "V2",
+      "enable": 1,
+      "period_s": 2.0,
+      "dst": 2,
+      "packed_bits": 704,
+      "fields": 23
+    },
+    {
+      "vector": "V3",
+      "enable": 1249,
+      "period_s": 1.0,
+      "dst": 2,
+      "packed_bits": 128,
+      "fields": 8
+    },
+    {
+      "vector": "V4",
+      "enable": 1248,
+      "period_s": 0.1,
+      "dst": 2,
+      "packed_bits": 1834,
+      "fields": 67
+    },
+    {
+      "vector": "V5",
+      "enable": 1254,
+      "period_s": 0.1,
+      "dst": 2,
+      "packed_bits": 362,
+      "fields": 19
+    },
+    {
+      "vector": "V6",
+      "enable": 1265,
+      "period_s": 0.3030303,
+      "dst": 7000,
+      "packed_bits": 3872,
+      "fields": 127
+    },
+    {
+      "vector": "V7",
+      "enable": 1265,
+      "period_s": 0.05,
+      "dst": 7000,
+      "packed_bits": 3334,
+      "fields": 334
+    }
+  ]
+}

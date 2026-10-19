@@ -1,0 +1,29 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "Fly view · night ops · cruise ISR, ENG caution (hour 9)",
+      "w": 1920,
+      "x": 76,
+      "y": 84
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-02T13:21:18Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "file": "Main.dc.html",
+    "view": "focused"
+  },
+  "notes": {},
+  "order": [
+    "Main.dc.html"
+  ],
+  "pages": [],
+  "title": "Phantom OPS — Fly View Mockup"
+}

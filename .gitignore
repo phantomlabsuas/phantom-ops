@@ -1,0 +1,18 @@
+# dependencies and build output
+node_modules/
+dist/
+# offline map extracts (large, licence-bound) and generated assets
+app/tiles/
+app/public/vendor/
+app/recordings/
+# local secrets
+.env.local
+.env.*.local
+# logs, OS and editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
+# local Claude settings
+.claude/settings.local.json

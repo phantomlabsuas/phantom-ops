@@ -1,0 +1,30 @@
+{
+  "_comment": "Phantom OPS v0 bridge configuration. See app/README.md.",
+  "ownAddress": 1100,
+  "multicast": { "group": "225.200.1.0", "iface": "127.0.0.1", "rxPort": 51017, "txPort": 51018 },
+  "pcsAddress": 9999,
+  "wsPort": 8787,
+  "pdiProfiles": [
+    {
+      "name": "Maintenance PDI",
+      "setupDir": "C:/Projects/Operational/phantomhawk-maint/veronte/Maint PDI/setup",
+      "hashes": { "0x347392F9": "V0", "0xD7463605": "V1", "0x1E9BC63C": "V2" }
+    },
+    {
+      "name": "Flight PDI",
+      "setupDir": "C:/Projects/Operational/phantomhawk-pdi/UAV-1xVeronte/setup",
+      "hashes": { "0x930456CA": "V0", "0xD7463605": "V1", "0x1E9BC63C": "V2" }
+    }
+  ],
+  "commands": {
+    "_comment": "Commands are only sent to AP addresses listed here. 6041 = SIL. Add a hardware AP address only deliberately.",
+    "allowedApAddresses": [6041]
+  },
+  "video": { "url": "http://localhost:8889/pilotwindow_h264" },
+  "map": {
+    "_comment": "Offline basemap, read by the web server (vite.config.ts), not the bridge. offlineDir: folder with .pmtiles extracts, absolute or relative to app/. offlineFile: which one to use (empty = first by name). See README \"Offline maps\".",
+    "offlineDir": "tiles",
+    "offlineFile": ""
+  },
+  "replay": { "_comment": "Set a path to record every received datagram (JSON lines) for later replay.", "recordTo": "" }
+}

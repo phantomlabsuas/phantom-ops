@@ -1,0 +1,25 @@
+group,label,event_id,event_name,event_type,source,automations
+motors / MOTORS TEST,TEST,143,Align Motor to flight pos,9,AP,Align Motor to flight position CMD: (BUTTON AND [B1232=1]) -> A90 set R3199 := 8.0
+Altitude / ASL,,101,ALT CMD Change ASL UP,9,AP,ALT CMD Change ASL UP: BUTTON -> A79 set B1251 := 1.0
+Altitude / ASL,,119,ALT CMD Change ASL Down,9,AP,ALT CMD change ASL Down: BUTTON -> A85 set B1252 := 1.0
+Altitude / AGL,,128,ALT CMD Change AGL UP,9,AP,ALT CMD Change AGL UP: BUTTON -> A79 set B1251 := 1.0
+Altitude / AGL,,132,ALT CMD Change AGL Down,9,AP,ALT CMD change AGL Down: BUTTON -> A85 set B1252 := 1.0
+Altitude,AGL,126,ALT AFL MODE CMD,9,AP,ALT AFL MODE CMD ON: (BUTTON AND [B1250=0]) -> A86 set B1250 := 1.0 || ALT AFL MODE CMD OFF: (BUTTON AND NOT [B1250=0]) -> A87 set B1250 := 0.0
+Panel Group / Versions Panel,PCS,1,,,device 9999,not in the AP PDI (event of that device)
+Panel Group / Versions Panel,UAV,109,Request Onetime MSG butto,9,AP,Request Onetime MSG: BUTTON -> A31 set B1249 := 1.0; A43 user timer 6
+Panel Group / Electric Panel,,113,Generator enable btn,9,AP,Generator enable ON: (BUTTON AND [B1705=0]) -> A67 set B1787 := 1.0 || Generator enable OFF: (BUTTON AND NOT [B1705=0]) -> A68 set B1787 := 0.0
+Panel Group / Avionics Panel / Group,NAV ,78,NAV LIGHTS SWITCH,9,AP,NAV Light Position ON: (BUTTON AND [B2199=0]) -> A36 GPIO 1 on; A38 set B2199 := 1.0 || NAV Light Position OFF: (NOT [B2199=0] AND BUTTON) -> A35 GPIO 1 off; A37 set B2199 := 0.0
+Panel Group / Avionics Panel / Group,STR,89,STROBE LIGHT SWITCH,9,AP,STROBE Light Position ON : (BUTTON AND [B2198=0]) -> A39 GPIO 2 on; A40 set B2198 := 1.0 || STROBE Light Position OFF: (BUTTON AND NOT [B2198=0]) -> A41 GPIO 2 off; A42 set B2198 := 0.0
+Panel Group / Avionics Panel / Group,MODE,106,LIDAR AUTO Mode,9,AP,LIDAR AUTO Mode ON Button: (BUTTON AND NOT [limits 73]) -> A62 set U1004 := 1.0 || LIDAR AUTO Mode OFF Button: (BUTTON AND [limits 73]) -> A63 set U1004 := 0.0
+Panel Group / Avionics Panel / Group,PWR,99,LIDAR PWR SWITCH,9,AP,LIDAR ON Button: (BUTTON AND NOT [limits 72]) -> A53 set U1003 := 1.0; A61 set U1004 := 0.0 || LIDAR OFF Button: (BUTTON AND [limits 72]) -> A58 set U1003 := 0.0; A61 set U1004 := 0.0
+Panel Group / Engine panel / Engine crank (armed only),Start,117,Crank button,9,AP,"Engine Crank: (BUTTON AND [phase in ARMED]) -> A56 set B1790 := 1.0, B1610 := 1.0"
+Panel Group / Engine panel / SET,SET,144,Engine Panel Throttle Com,9,AP,Engine Panel Throttle Control Button ON: (BUTTON AND [B1300=0]) -> A78 set B1300 := 1.0 || Engine Panel Throttle Control Button OFF: (BUTTON AND NOT [B1300=0]) -> A80 set B1300 := 0.0
+Speed,MIN,93,SET IAS CMD MODE MINIMUM ,9,AP,IAS CMD MODE MINIMUM: BUTTON -> A45 set U1002 := 1.0
+Speed,CRS,94,SET IAS CMD MODE NOMINAL ,9,AP,IAS CMD MODE NOMINAL: BUTTON -> A46 set U1002 := 0.0
+Speed,MAX,95,IAS CMD MODE MAXIMUM BUTT,9,AP,IAS CMD MODE MAXIMUM: BUTTON -> A47 set U1002 := 2.0
+Speed,,97,IAS ADD BTN MANUAL,9,AP,IAS MANUAL CHANGE UP CMD: BUTTON -> A49 set B1217 := 1.0; A48 set U1002 := 3.0
+Speed,,98,IAS MANUAL CHANGE DOWN CM,9,AP,IAS MANUAL CHANGE DOWN CMD: BUTTON -> A50 set B1218 := 1.0; A48 set U1002 := 3.0
+Speed / PITOT CALIBRATION,CALIBRATE,164,IAS Offset Calibration,9,AP,IAS Offset calibration: (BUTTON AND [phase in INITIAL]) -> A98 set B1274 := 1.0
+STICKS PANEL - DETECTED,SEC EN,22,Secondary FBX Selected ON,9,AP,Secondary FBX Selected ON: (BUTTON AND NOT [B1301=1]) -> A10 set B1301 := 1.0; A32 set B1304 := 0.0; A8 set B1285 := 0.0 || Secondary FBX Selected OFF: (BUTTON AND [B1301=1]) -> A13 set B1301 := 0.0; A32 set B1304 := 0.0; A8 set B1285 := 0.0
+Motors Disable Button,MOTOR DISARM,30,Motors arm Software Enabl,9,AP,Motors arm Software Enable Button to OFF: (BUTTON AND [B1247=1]) -> A25 set B1247 := 0.0 || Motors arm Software Enable Button to On: ((BUTTON AND NOT [B1247=1]) OR [phase in STANDBY/TAKE-OFF READY/ARMED/INITIAL]) -> A28 set B1247 := 1.0
+,,150,Clear Sticky Errors butto,9,AP,Clear Sticky Errors: BUTTON -> A92 CAN tx producer 2 msg 4; A93 CAN tx producer 2 msg 5

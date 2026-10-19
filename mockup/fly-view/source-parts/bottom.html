@@ -1,0 +1,339 @@
+  <sc-if value="{{ engOpen }}" hint-placeholder-val="{{ false }}">
+    <section aria-label="Engine window" style="position: absolute; left: 16px; bottom: 80px; width: 520px; box-sizing: border-box; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px; background: rgba(13,17,21,0.97); border: 1px solid #3A4550; border-radius: 10px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em;">ENGINE · EFI</h2>
+        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 4px; border: 1px solid #FFB547; color: #FFB547; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;">
+          <svg viewBox="0 0 10 10" width="9" height="9" aria-hidden="true"><path d="M5 0.5 L9.5 5 L5 9.5 L0.5 5 Z" style="fill: #FFB547;"></path></svg>
+          CAUTION · CHT 2
+        </span>
+        <span style="flex-grow: 1;"></span>
+        <span style="font-size: 12px; color: #8A949E;">live · 1 Hz</span>
+        <button type="button" onClick="{{ closePanel }}" aria-label="Close engine window" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #3A4550; background: transparent; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 2 L10 10 M10 2 L2 10" style="stroke: #E4E8EC; stroke-width: 1.6; stroke-linecap: round;"></path></svg>
+        </button>
+      </div>
+
+      <div style="display: flex; align-items: flex-start; gap: 12px;">
+        <svg viewBox="0 0 170 140" width="170" height="140" role="img" aria-label="Engine RPM gauge">
+          <path d="M 27.8 118.0 A 66 66 0 1 1 142.2 118.0" style="fill: none; stroke: #232B33; stroke-width: 8;"></path>
+          <path d="M 122.2 30.5 A 66 66 0 0 1 150.9 88.0" style="fill: none; stroke: #6B7580; stroke-width: 8;"></path>
+          <path d="M 150.9 88.0 A 66 66 0 0 1 145.7 110.9" style="fill: none; stroke: #FFB547; stroke-width: 8;"></path>
+          <path d="M 145.7 110.9 A 66 66 0 0 1 142.2 118.0" style="fill: none; stroke: #FF5A5F; stroke-width: 8;"></path>
+          <path d="M 34.8 114.0 L 27.8 118.0 M 27.2 80.7 L 19.2 80.1 M 39.7 48.8 L 33.4 43.8 M 67.9 29.6 L 65.5 21.9 M 102.1 29.6 L 104.5 21.9 M 130.3 48.8 L 136.6 43.8 M 142.8 80.7 L 150.8 80.1 M 135.2 114.0 L 142.2 118.0" style="stroke: #8A949E; stroke-width: 1.25;"></path>
+          <text x="45.2" y="112" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">0</text>
+          <text x="39.1" y="85.6" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">1</text>
+          <text x="49" y="60.3" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">2</text>
+          <text x="71.4" y="45" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">3</text>
+          <text x="98.6" y="45" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">4</text>
+          <text x="121" y="60.3" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">5</text>
+          <text x="130.9" y="85.6" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">6</text>
+          <text x="124.8" y="112" style="font-size: 10.5px; fill: #8A949E; text-anchor: middle;">7</text>
+          <line x1="85" y1="85" x2="85" y2="29" transform="rotate({{ rpmAng }} 85 85)" style="stroke: #F2F4F6; stroke-width: 2.5; stroke-linecap: round;"></line>
+          <circle cx="85" cy="85" r="5" style="fill: #F2F4F6;"></circle>
+          <text x="85" y="112" style="font-size: 20px; font-weight: 600; fill: #F2F4F6; text-anchor: middle; font-family: 'IBM Plex Mono', monospace;">{{ rpm }}</text>
+          <text x="85" y="128" style="font-size: 11px; fill: #8A949E; text-anchor: middle;">rpm × 1000 scale</text>
+        </svg>
+
+        <svg viewBox="0 0 170 170" width="170" height="170" role="img" aria-label="Cylinder head and exhaust gas temperatures">
+          <rect x="20" y="12" width="24" height="120" rx="3" style="fill: #161C22; stroke: #2A333C;"></rect>
+          <rect x="72" y="12" width="24" height="120" rx="3" style="fill: #161C22; stroke: #2A333C;"></rect>
+          <rect x="124" y="12" width="24" height="120" rx="3" style="fill: #161C22; stroke: #2A333C;"></rect>
+          <rect x="21" y="{{ c1Y }}" width="22" height="{{ c1H }}" style="fill: #8A949E;"></rect>
+          <rect x="73" y="{{ c2Y }}" width="22" height="{{ c2H }}" style="fill: #FFB547;"></rect>
+          <rect x="125" y="{{ egY }}" width="22" height="{{ egH }}" style="fill: #8A949E;"></rect>
+          <path d="M 16 42 H 48 M 68 42 H 100 M 120 36 H 152" style="stroke: #FFB547; stroke-width: 1.5;"></path>
+          <path d="M 16 27 H 48 M 68 27 H 100 M 120 22.3 H 152" style="stroke: #FF5A5F; stroke-width: 1.5;"></path>
+          <text x="32" y="148" style="font-size: 11px; font-weight: 600; fill: #8A949E; text-anchor: middle;">CHT 1</text>
+          <text x="84" y="148" style="font-size: 11px; font-weight: 600; fill: #FFB547; text-anchor: middle;">CHT 2</text>
+          <text x="136" y="148" style="font-size: 11px; font-weight: 600; fill: #8A949E; text-anchor: middle;">EGT</text>
+          <text x="32" y="164" style="font-size: 13px; fill: #C9D1D9; text-anchor: middle; font-family: 'IBM Plex Mono', monospace;">{{ cht1i }}</text>
+          <text x="84" y="164" style="font-size: 13px; font-weight: 600; fill: #FFE2B3; text-anchor: middle; font-family: 'IBM Plex Mono', monospace;">{{ cht2i }}</text>
+          <text x="136" y="164" style="font-size: 13px; fill: #C9D1D9; text-anchor: middle; font-family: 'IBM Plex Mono', monospace;">{{ egti }}</text>
+        </svg>
+
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px; padding-top: 8px;">
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #8A949E;">THROTTLE</div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: #A9B2BB;"><span>Commanded</span><span style="font-family: 'IBM Plex Mono', monospace; color: #E4E8EC;">78%</span></div>
+            <div style="height: 6px; border-radius: 3px; background: #1E252C;"><div style="width: 78%; height: 6px; border-radius: 3px; background: #8A949E;"></div></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: #A9B2BB;"><span>Actual</span><span style="font-family: 'IBM Plex Mono', monospace; color: #E4E8EC;">77%</span></div>
+            <div style="height: 6px; border-radius: 3px; background: #1E252C;"><div style="width: 77%; height: 6px; border-radius: 3px; background: #8A949E;"></div></div>
+          </div>
+          <div style="font-size: 11px; color: #8A949E; line-height: 1.35;">°C · amber and red lines are the OEM limits</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #8A949E;"><span>CHT 2 · LAST 30 MIN</span><span style="color: #FFB547;">+1.5 °C/min · red in ~9 min</span></div>
+        <svg viewBox="0 0 488 64" width="488" height="64" role="img" aria-label="CHT 2 rising into the amber band over the last 30 minutes">
+          <path d="M 0 6 H 488" style="stroke: #FF5A5F; stroke-width: 1; stroke-dasharray: 3 3;"></path>
+          <path d="M 0 22 H 488" style="stroke: #FFB547; stroke-width: 1; stroke-dasharray: 3 3;"></path>
+          <path d="M 0 46 L 49 45 L 98 46 L 146 45 L 195 43 L 244 41 L 293 38.5 L 342 35 L 390 31 L 439 26 L 488 20" style="fill: none; stroke: #FFB547; stroke-width: 2; stroke-linejoin: round;"></path>
+          <circle cx="486" cy="20" r="3" style="fill: #FFB547;"></circle>
+          <text x="0" y="62" style="font-size: 10.5px; fill: #8A949E;">−30 min</text>
+          <text x="488" y="62" style="font-size: 10.5px; fill: #8A949E; text-anchor: end;">now</text>
+        </svg>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px;">
+        <div style="padding: 8px 10px; border: 1px solid #232B33; border-radius: 6px;"><div style="font-size: 11px; color: #8A949E;">MAP</div><div style="font-size: 14px; font-family: 'IBM Plex Mono', monospace;">82 kPa</div></div>
+        <div style="padding: 8px 10px; border: 1px solid #232B33; border-radius: 6px;"><div style="font-size: 11px; color: #8A949E;">Ignition</div><div style="font-size: 14px; font-family: 'IBM Plex Mono', monospace;">13.8 V</div></div>
+        <div style="padding: 8px 10px; border: 1px solid #232B33; border-radius: 6px;"><div style="font-size: 11px; color: #8A949E;">Mixture</div><div style="font-size: 14px; font-family: 'IBM Plex Mono', monospace;">auto-lean</div></div>
+        <div style="padding: 8px 10px; border: 1px solid #232B33; border-radius: 6px;"><div style="font-size: 11px; color: #8A949E;">Engine hrs</div><div style="font-size: 14px; font-family: 'IBM Plex Mono', monospace;">312.4</div></div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ fuelOpen }}" hint-placeholder-val="{{ false }}">
+    <section aria-label="Fuel window" style="position: absolute; left: 287px; bottom: 80px; width: 440px; box-sizing: border-box; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px; background: rgba(13,17,21,0.97); border: 1px solid #3A4550; border-radius: 10px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em;">FUEL</h2>
+        <span style="padding: 2px 8px; border-radius: 4px; border: 1px solid #3A4550; color: #C9D1D9; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;">MEASURED · flow + level agree</span>
+        <span style="flex-grow: 1;"></span>
+        <button type="button" onClick="{{ closePanel }}" aria-label="Close fuel window" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #3A4550; background: transparent; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 2 L10 10 M10 2 L2 10" style="stroke: #E4E8EC; stroke-width: 1.6; stroke-linecap: round;"></path></svg>
+        </button>
+      </div>
+
+      <div style="display: flex; gap: 14px;">
+        <svg viewBox="0 0 136 200" width="136" height="200" role="img" aria-label="Fuel tank level">
+          <rect x="8" y="8" width="60" height="184" rx="10" style="fill: #12171C; stroke: #4A5560; stroke-width: 1.5;"></rect>
+          <rect x="12" y="{{ tankY }}" width="52" height="{{ tankH }}" rx="4" style="fill: #C9D1D9; opacity: 0.85;"></rect>
+          <path d="M 8 56 H 16 M 8 100 H 16 M 8 144 H 16" style="stroke: #4A5560; stroke-width: 1.25;"></path>
+          <path d="M 4 172.5 H 72" style="stroke: #F2F4F6; stroke-width: 1.5; stroke-dasharray: 4 3;"></path>
+          <path d="M 4 177.9 H 72" style="stroke: #8A949E; stroke-width: 1;"></path>
+          <text x="76" y="16" style="font-size: 11px; fill: #8A949E;">42 L</text>
+          <text x="76" y="{{ tankLblY }}" style="font-size: 12px; font-weight: 600; fill: #F2F4F6; font-family: 'IBM Plex Mono', monospace;">{{ fuelTxt }}</text>
+          <text x="76" y="168" style="font-size: 11px; font-weight: 600; fill: #F2F4F6;">BINGO 3.7 L</text>
+          <text x="76" y="190" style="font-size: 11px; fill: #8A949E;">RES 2.4 L</text>
+        </svg>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-size: 32px; font-weight: 600; line-height: 1; font-family: 'IBM Plex Mono', monospace;">{{ fuelTxt }}</span>
+            <span style="font-size: 13px; color: #A9B2BB;">{{ fuelPct }} of 42 L</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px;"><span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">BURN · 2 H</span><span style="font-family: 'IBM Plex Mono', monospace;">2.4 L/h</span></div>
+            <svg viewBox="0 0 230 28" width="230" height="28" aria-hidden="true"><path d="M 0 16 L 20 14 L 40 15 L 60 12 L 80 14 L 100 13 L 120 16 L 140 13 L 160 12 L 180 14 L 200 13 L 230 13" style="fill: none; stroke: #8A949E; stroke-width: 1.5;"></path></svg>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px;"><span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">FUEL TEMP</span><span style="font-family: 'IBM Plex Mono', monospace;">34 °C</span></div>
+            <svg viewBox="0 0 230 14" width="230" height="14" aria-hidden="true">
+              <rect x="0" y="4" width="230" height="6" rx="3" style="fill: #1E252C;"></rect>
+              <rect x="33" y="4" width="131" height="6" style="fill: #3A4550;"></rect>
+              <rect x="143" y="0" width="3" height="14" rx="1" style="fill: #F2F4F6;"></rect>
+            </svg>
+            <div style="display: flex; justify-content: space-between; font-size: 10.5px; color: #8A949E;"><span>−10</span><span>normal 0–50</span><span>60</span></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px;"><span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">FUEL PRESSURE</span><span style="font-family: 'IBM Plex Mono', monospace;">3.1 bar</span></div>
+            <svg viewBox="0 0 230 14" width="230" height="14" aria-hidden="true">
+              <rect x="0" y="4" width="230" height="6" rx="3" style="fill: #1E252C;"></rect>
+              <rect x="115" y="4" width="60" height="6" style="fill: #3A4550;"></rect>
+              <rect x="141" y="0" width="3" height="14" rx="1" style="fill: #F2F4F6;"></rect>
+            </svg>
+            <div style="display: flex; justify-content: space-between; font-size: 10.5px; color: #8A949E;"><span>0</span><span>normal 2.5–3.8</span><span>5</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #8A949E;">ENDURANCE AT CURRENT BURN</div>
+        <svg viewBox="0 0 408 58" width="408" height="58" role="img" aria-label="Endurance timeline: bingo, predicted landing and dry tank">
+          <rect x="0" y="24" width="275" height="8" rx="2" style="fill: #8A949E;"></rect>
+          <rect x="275" y="24" width="133" height="8" rx="2" style="fill: #2A333C;"></rect>
+          <path d="M 275 18 V 38" style="stroke: #F2F4F6; stroke-width: 2;"></path>
+          <circle cx="319" cy="28" r="5" style="fill: #0B0E11; stroke: #F2F4F6; stroke-width: 1.75;"></circle>
+          <path d="M 407 18 V 38" style="stroke: #6B7580; stroke-width: 2;"></path>
+          <text x="0" y="14" style="font-size: 11px; fill: #8A949E;">now</text>
+          <text x="275" y="14" style="font-size: 12px; font-weight: 600; fill: #F2F4F6; text-anchor: middle; font-family: 'IBM Plex Mono', monospace;">BINGO {{ bingoHMS }}</text>
+          <text x="319" y="52" style="font-size: 11px; fill: #C9D1D9; text-anchor: middle; font-family: 'IBM Plex Mono', monospace;">land 3:43</text>
+          <text x="408" y="14" style="font-size: 11px; fill: #8A949E; text-anchor: end; font-family: 'IBM Plex Mono', monospace;">dry 4:45</text>
+        </svg>
+      </div>
+    </section>
+  </sc-if>
+
+  <footer aria-label="Aircraft health" style="position: absolute; left: 0px; top: 1008px; width: 1920px; height: 72px; box-sizing: border-box; padding: 8px 16px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; background: rgba(13,17,21,0.97); border-top: 1px solid #232B33;">
+
+    <button type="button" onClick="{{ openEng }}" aria-expanded="{{ engOpen }}" aria-label="Engine, caution. Open engine window" style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; text-align: left; background: rgba(255,181,71,0.1); border-radius: 8px; {{ engSeg }}">
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M6 0.5 L11.5 6 L6 11.5 L0.5 6 Z" style="fill: #FFB547;"></path></svg>
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #FFB547;">ENG</span>
+          <span style="color: #C9D1D9; font-family: 'IBM Plex Mono', monospace;">{{ rpm }} rpm</span>
+        </span>
+        <span style="font-size: 15px; font-weight: 600; font-family: 'IBM Plex Mono', monospace; color: #FFE2B3;">CHT {{ cht2i }} °C ↑</span>
+      </span>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 19 L10 19 L20 18 L30 17 L40 15 L50 11 L64 6" style="fill: none; stroke: #FFB547; stroke-width: 1.75;"></path></svg>
+      <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="{{ engChev }}" style="fill: none; stroke: #FFB547; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
+    </button>
+
+    <button type="button" onClick="{{ openFuel }}" aria-expanded="{{ fuelOpen }}" aria-label="Fuel. Open fuel window" style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; text-align: left; border-radius: 8px; {{ fuelSeg }}">
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">FUEL</span>
+          <span style="color: #8A949E; font-family: 'IBM Plex Mono', monospace;">bingo {{ bingoHM }}</span>
+        </span>
+        <span style="font-size: 15px; font-family: 'IBM Plex Mono', monospace; color: #C9D1D9;">{{ fuelTxt }} · {{ fuelPct }}</span>
+      </span>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 5 L64 19" style="fill: none; stroke: #5B6570; stroke-width: 1.5;"></path></svg>
+      <svg viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="{{ fuelChev }}" style="fill: none; stroke: #8A949E; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
+    </button>
+
+    <div style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; background: #12171C; border: 1px solid #232B33; border-radius: 8px;">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">ELEC</span>
+          <span style="color: #8A949E; font-family: 'IBM Plex Mono', monospace;">GEN 412 W</span>
+        </div>
+        <div style="font-size: 15px; font-family: 'IBM Plex Mono', monospace; color: #C9D1D9;">28.2 V · charging</div>
+      </div>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 12 L12 11 L24 12 L36 12 L48 11 L64 12" style="fill: none; stroke: #5B6570; stroke-width: 1.5;"></path></svg>
+    </div>
+
+    <div style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; background: #12171C; border: 1px solid #232B33; border-radius: 8px;">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">LIFT</span>
+          <span style="color: #8A949E; font-family: 'IBM Plex Mono', monospace;">VTOL res +38%</span>
+        </div>
+        <div style="font-size: 15px; font-family: 'IBM Plex Mono', monospace; color: #C9D1D9;">94% · 29 °C</div>
+      </div>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 8 L64 8" style="fill: none; stroke: #5B6570; stroke-width: 1.5;"></path></svg>
+    </div>
+
+    <div style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; background: #12171C; border: 1px solid #232B33; border-radius: 8px;">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">NAV</span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 16px; height: 16px; border-radius: 8px; border: 1.25px solid #F2F4F6; font-size: 11px; font-weight: 700; color: #F2F4F6;">1</span>
+        </div>
+        <div style="font-size: 15px; font-family: 'IBM Plex Mono', monospace; color: #C9D1D9;">GNSS 2/2 · EKF ok</div>
+      </div>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 14 L16 13 L28 14 L40 10 L52 12 L64 11" style="fill: none; stroke: #5B6570; stroke-width: 1.5;"></path></svg>
+    </div>
+
+    <div style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; background: #12171C; border: 1px solid #232B33; border-radius: 8px;">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">LINK</span>
+          <span style="color: #8A949E; font-family: 'IBM Plex Mono', monospace;">SATCOM ready</span>
+        </div>
+        <div style="font-size: 15px; font-family: 'IBM Plex Mono', monospace; color: #C9D1D9;">−81 dBm · 38 ms</div>
+      </div>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 9 L12 10 L24 9 L36 11 L48 12 L64 13" style="fill: none; stroke: #5B6570; stroke-width: 1.5;"></path></svg>
+    </div>
+
+    <div style="box-sizing: border-box; padding: 6px 12px; display: flex; align-items: center; gap: 10px; background: #12171C; border: 1px solid #232B33; border-radius: 8px;">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0;">
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 12px;">
+          <span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">AP</span>
+          <span style="color: #8A949E; font-family: 'IBM Plex Mono', monospace;">WP 14/22 · cmd ✓</span>
+        </div>
+        <div style="font-size: 15px; font-family: 'IBM Plex Mono', monospace; color: #C9D1D9;">{{ apTxt }}</div>
+      </div>
+      <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><path d="M0 12 L64 12" style="fill: none; stroke: #5B6570; stroke-width: 1.5;"></path></svg>
+    </div>
+  </footer>
+
+  <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+    <section aria-label="{{ menuTitle }}" style="position: absolute; left: 56px; top: 64px; width: 400px; height: 944px; box-sizing: border-box; padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; background: rgba(13,17,21,0.98); border-right: 1px solid #3A4550;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em;">{{ menuTitle }}</h2>
+        <button type="button" onClick="{{ mFly }}" aria-label="Close panel" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #3A4550; background: transparent; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 2 L10 10 M10 2 L2 10" style="stroke: #E4E8EC; stroke-width: 1.6; stroke-linecap: round;"></path></svg>
+        </button>
+      </div>
+
+      <sc-if value="{{ isCheck }}" hint-placeholder-val="{{ true }}">
+        <div role="tablist" aria-label="Checklist phase" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 3px; border: 1px solid #232B33; border-radius: 8px;">
+          <button type="button" role="tab" onClick="{{ tPre }}" style="height: 36px; border-radius: 6px; border: 0; font-size: 12px; font-weight: 600; {{ tabPre }}">Pre-flight</button>
+          <button type="button" role="tab" onClick="{{ tCru }}" style="height: 36px; border-radius: 6px; border: 0; font-size: 12px; font-weight: 600; {{ tabCru }}">Cruise</button>
+          <button type="button" role="tab" onClick="{{ tLand }}" style="height: 36px; border-radius: 6px; border: 0; font-size: 12px; font-weight: 600; {{ tabLand }}">Pre-landing</button>
+          <button type="button" role="tab" onClick="{{ tEmg }}" style="height: 36px; border-radius: 6px; border: 0; font-size: 12px; font-weight: 600; {{ tabEmg }}">Emergency</button>
+        </div>
+
+        <sc-if value="{{ tabIsLand }}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <div style="font-size: 19px; font-weight: 600;">Pre-landing · back-transition</div>
+            <div style="font-size: 13px; color: #A9B2BB;">Complete before WP 21 · back-transition ≥ 60 m AGL</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px;"><span style="font-weight: 700; letter-spacing: 0.1em; color: #8A949E;">PROGRESS</span><span style="font-family: 'IBM Plex Mono', monospace;">{{ ckDone }} / 9</span></div>
+            <div style="height: 6px; border-radius: 3px; background: #1E252C;"><div style="height: 6px; border-radius: 3px; background: #E4E8EC; {{ ckBar }}"></div></div>
+          </div>
+
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #8A949E;">VERIFIED FROM TELEMETRY</div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #1A2026;">
+              <span style="width: 20px; height: 20px; border-radius: 10px; background: #3A4550; color: #E4E8EC; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">✓</span>
+              <span style="flex-grow: 1; font-size: 14px;">Lift battery ≥ 60%</span>
+              <span style="font-size: 12px; color: #A9B2BB; font-family: 'IBM Plex Mono', monospace;">94%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #1A2026;">
+              <span style="width: 20px; height: 20px; border-radius: 10px; background: #3A4550; color: #E4E8EC; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">✓</span>
+              <span style="flex-grow: 1; font-size: 14px;">Lift motors and ESC temps normal</span>
+              <span style="font-size: 12px; color: #A9B2BB; font-family: 'IBM Plex Mono', monospace;">4/4</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #1A2026;">
+              <span style="width: 20px; height: 20px; border-radius: 10px; background: #3A4550; color: #E4E8EC; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">✓</span>
+              <span style="flex-grow: 1; font-size: 14px;">LZ-A wind within hover limit</span>
+              <span style="font-size: 12px; color: #A9B2BB; font-family: 'IBM Plex Mono', monospace;">8 / 18 kt</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #1A2026;">
+              <span style="width: 20px; height: 20px; border-radius: 10px; background: #3A4550; color: #E4E8EC; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">✓</span>
+              <span style="flex-grow: 1; font-size: 14px;">Fuel ≥ RTB + reserve</span>
+              <span style="font-size: 12px; color: #A9B2BB; font-family: 'IBM Plex Mono', monospace;">{{ fuelTxt }} / 3.7 L</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 0;">
+              <span style="width: 20px; height: 20px; border-radius: 10px; background: #3A4550; color: #E4E8EC; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">✓</span>
+              <span style="flex-grow: 1; font-size: 14px;">Airspeed agrees with GPS and wind</span>
+              <span style="font-size: 12px; color: #A9B2BB; font-family: 'IBM Plex Mono', monospace;">Δ 1.2 m/s</span>
+            </div>
+          </div>
+
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #8A949E;">OPERATOR CONFIRMS</div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <button type="button" onClick="{{ k1 }}" aria-pressed="{{ m1 }}" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 10px; border-radius: 8px; border: 1px solid #2A333C; background: #12171C; text-align: left;">
+              <span style="width: 20px; height: 20px; box-sizing: border-box; border-radius: 4px; border: 1.5px solid #A9B2BB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; {{ b1 }}">✓</span>
+              <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 14px;">LZ-A clear</span><span style="font-size: 12px; color: #8A949E;">confirmed by radio with ground crew</span></span>
+            </button>
+            <button type="button" onClick="{{ k2 }}" aria-pressed="{{ m2 }}" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 10px; border-radius: 8px; border: 1px solid #2A333C; background: #12171C; text-align: left;">
+              <span style="width: 20px; height: 20px; box-sizing: border-box; border-radius: 4px; border: 1.5px solid #A9B2BB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; {{ b2 }}">✓</span>
+              <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 14px;">Approach heading into wind</span><span style="font-size: 12px; color: #8A949E;">final 310° · long final ≥ 400 m</span></span>
+            </button>
+            <button type="button" onClick="{{ k3 }}" aria-pressed="{{ m3 }}" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 10px; border-radius: 8px; border: 1px solid #2A333C; background: #12171C; text-align: left;">
+              <span style="width: 20px; height: 20px; box-sizing: border-box; border-radius: 4px; border: 1.5px solid #A9B2BB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; {{ b3 }}">✓</span>
+              <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 14px;">Gimbal stowed</span><span style="font-size: 12px; color: #8A949E;">payload caged for landing</span></span>
+            </button>
+            <button type="button" onClick="{{ k4 }}" aria-pressed="{{ m4 }}" style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 10px; border-radius: 8px; border: 1px solid #2A333C; background: #12171C; text-align: left;">
+              <span style="width: 20px; height: 20px; box-sizing: border-box; border-radius: 4px; border: 1.5px solid #A9B2BB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; {{ b4 }}">✓</span>
+              <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 14px;">Engine cut at final armed</span><span style="font-size: 12px; color: #8A949E;">planned stop, no engine-out alarm</span></span>
+            </button>
+          </div>
+
+          <div style="flex-grow: 1;"></div>
+          <button type="button" onClick="{{ armBt }}" disabled="{{ notReady }}" style="height: 48px; border-radius: 8px; font-size: 15px; font-weight: 700; letter-spacing: 0.04em; {{ armStyle }}">{{ armLabel }}</button>
+          <div style="font-size: 12px; color: #8A949E; text-align: center;">{{ armNote }}</div>
+        </sc-if>
+
+        <sc-if value="{{ tabNotLand }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px dashed #3A4550; border-radius: 8px;">
+            <div style="font-size: 15px; font-weight: 600;">{{ tabName }} checklist</div>
+            <div style="font-size: 13px; color: #A9B2BB;">Not drawn in this mockup. Pre-landing shows the pattern: telemetry-verified items tick themselves, operator items need a tap.</div>
+          </div>
+        </sc-if>
+      </sc-if>
+
+      <sc-if value="{{ isOther }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px; border: 1px dashed #3A4550; border-radius: 8px;">
+          <div style="font-size: 15px; font-weight: 600;">{{ menuTitle }} workspace</div>
+          <div style="font-size: 13px; color: #A9B2BB;">Not drawn in this mockup yet. Checklists is the designed example.</div>
+          <button type="button" onClick="{{ mCheck }}" style="align-self: flex-start; height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #4A5560; background: transparent; font-size: 13px; font-weight: 600;">Open Checklists</button>
+        </div>
+      </sc-if>
+    </section>
+  </sc-if>

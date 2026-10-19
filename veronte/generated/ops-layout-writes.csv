@@ -1,0 +1,23 @@
+group,widget,widget_id,var,description,pdi_name,unit,decimals,source,telemetry,label,ranges,range,command
+HUD Window / BALL AND HDG CNTRL,Knob,8202ef2d-f454-4035-bf78-3ced83c74bb3,R3177,Knobs HDG cmd -- rad,Knobs HDG cmd,205,2,AP,always (V1),,,,VCP 50041 #235 variable set
+HUD Window / HDG CMD,Input Data,9e509f34-9c9b-4c2f-8974-a22ad3d44c63,R3177,Knobs HDG cmd -- rad,Knobs HDG cmd,101,2,AP,always (V1),,,,VCP 50041 #235 variable set
+SIM,Slider,06beb2e1-09e2-467a-aed1-eb074c25aef7,B1237,SIM KNOBS ENGINE CUT CMD ,SIM KNOBS ENGINE CUT CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM,Slider,de77ed1c-30ba-4ad9-821c-e3e906a94594,B1238,SIM KNOBS HOLD CMD ,SIM KNOBS HOLD CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM,Slider,5c61fdb8-82ca-4ca1-8338-201be34d574a,B1239,SIM KNOBS RETURN CMD ,SIM KNOBS RETURN CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM,Slider,09b7a39f-d6d4-4c44-9ba6-067b35e68544,B1900,Simulator Link status CMD ,Simulator Link status CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM,Slider,b4458285-dfb4-4bce-b143-338ee37c15e8,B1244,Sim Position not fix ,Sim Position not fix,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM,Slider,9cb68f7f-7f98-48e7-ab60-0bcf39e1e182,B1241,Wing enable sim CMD ,Wing enable sim CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM / Toggle ARM on,Slider,298da710-44c5-4a36-bd29-bbafd7b6a96d,B1236,SIM KNOBS MOTORS ARM CMD ,SIM KNOBS MOTORS ARM CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+SIM / Toggle ARM off,Slider,7c1f0a2f-9d3b-4c51-a2e6-0b1c2d3e4f5f,B1236,SIM KNOBS MOTORS ARM CMD ,SIM KNOBS MOTORS ARM CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+HOLD TURN,Slider,f6a80003-9d3e-4f60-a123-d7e9f1023405,B1256,User BIT 56 ERROR,Hold CW Operator CMD,,0,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+HOLD TURN,Slider,f6a80006-9d3e-4f60-a123-d7e9f1023405,R3234,RH delay timer,RH Delay timer,39,0,AP,always (V1),,,3..180 step 1,VCP 50041 #235 variable set
+Altitude / ASL / SET ALT ASL,Slider,5a0c1003-0b1e-4a71-9c01-aa0000000051,R3173,Knobs MSL cmd,Knobs MSL cmd,10,0,AP,always (V1),,,0..15000 step 500,VCP 50041 #235 variable set
+Altitude / AGL / SET ALT AGL,Slider,5a0c1003-0b1e-4a71-9c01-aa0000000052,R3187,AFL ALT CMD,AFL ALT CMD,10,0,AP,always (V1),,,0..15000 step 100,VCP 50041 #235 variable set
+Panel Group / Versions Panel,Slider,687adec5-ee46-4179-962d-b630b0317c0f,B1248,Test Flight ,Test Flight,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+Panel Group / Versions Panel / Group conditional,Slider,58de758c-b466-4b82-9a50-a1268f8eaee0,B1255,Enable energy control ,Enable energy control,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+Panel Group / Versions Panel / Group conditional,Slider,71801783-d942-4cff-8bb1-c764aca687eb,B1254,Enable passenger telemetry,Enable passenger telemetry,,2,AP,"conditional (V4 if B1248,V7 if B1265)",,,0..1 step 1,VCP 50041 #235 variable set
+Panel Group / Comms Panel,Slider,f8b9a20a-5847-439d-9066-269ac3c9bc30,B1314,Secondary link ON User Override  ,Secondary link ON User Override,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+Panel Group / Avionics Panel / SET,Input Data,bceea139-0d63-4a10-af42-fe4eaaaf9d9f,R3180,UAV WEIGHT INPUT,UAV WEIGHT INPUT,122,2,AP,always (V1),,,,VCP 50041 #235 variable set
+Panel Group / Avionics Panel / RTK,Slider,5a0c100b-0b1e-4a71-9c01-aa00000000a3,B1262,Enable RTK CMD,Enable RTK CMD,,2,AP,always (V1),,,0..1 step 1,VCP 50041 #235 variable set
+Panel Group / Engine panel / SET,Slider,9e1542bc-7784-4e2f-9b70-34364bda67a8,R3200,Engine Panel Throttle Input,Engine Panel Throttle Input,64,2,AP,always (V1),,,0..100 step 10,VCP 50041 #235 variable set
+Panel Group / Engine panel / FUEL QUANTITY,Slider,a2c8e4f1-6d3b-4a7e-9c5f-8b1d2e6a4c92,R3183,Fuel Quantity Input,Fuel Quantity Input,334,1,AP,always (V2),,,0..7.5 step 0.1,VCP 50041 #235 variable set
